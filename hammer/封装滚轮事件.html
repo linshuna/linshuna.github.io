@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<meta charset="uft-8">
+	<title>封装滚轮事件</title>
+<style type="text/css">
+	#wrap{
+		width: 200px;
+		height: 200px;
+		background: red;
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+<div id="wrap"></div>
+<script type="text/javascript">
+	function wheelFn(obj,cb){
+		// alert(navigator.userAgent);
+		if (navigator.userAgent.indexOf("Firefox")>-1) {//判断是火狐还是其他的浏览器
+			obj.addEventListener("DOMMouseScroll",fn);
+		}else{
+			obj.onmousewheel = fn;
+		}
+		function fn(e){//cb和fn是不同函数
+			var down = false;//是判读方向
+			if (e.detail) {//有值是火狐的 
+				// e.detail<0?down = false:down = true;
+				// if (e.detail<0) {
+				// 	down = false;
+				// }else{
+				// 	down = true;
+				// }
+				down = e.detail>0;
+			}else{
+				down = e.wheelDelta<0;
+			}
+			cb(down);//是调用下面的 设置宽度是要加还是要减
+		}
+	}
+	wheelFn(wrap,function(down){
+		if (down) {
+			wrap.style.width = (wrap.offsetWidth+10)+"px";
+			wrap.style.height = (wrap.offsetHeight+10)+"px";
+			// console.log(wrap.style.width);
+		}else{
+			wrap.style.width = (wrap.offsetWidth-10)+"px";
+			wrap.style.height = (wrap.offsetHeight-10)+"px";
+			console.log(wrap.style.width);
+			
+		}
+	});
+</script>
+</html>
