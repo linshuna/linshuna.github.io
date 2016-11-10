@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Day39_canvas2</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">canvas_2</h1>
+
+<h2 id="toc_1">图形的组合方式</h2>
+
+<ul>
+<li>source-over：为属性globalCompositeOperation属性的默认值表示新图形覆盖在原图形之上</li>
+<li>source-atop：只绘制新图形与原图形相重叠的部分，以及原图形其他部分</li>
+<li>source-in：只绘制新图形与原图形重叠的部分，新图形与原图形其他部分变透明</li>
+<li>source-out：只绘制新图形与原图形不重叠的部分；新图形与原图形其他部分变透明</li>
+<li>destination-over：表示原图形覆盖在新图形之上destination-atop：只绘制原图形与新图形相重叠的部分，以及新图形其他部分</li>
+<li>destination-in：只绘制原图形与新图形重叠的部分，原图形与新图形其他部分变透明</li>
+<li>destination-out：只绘制原图形与新图形不重叠的部分；原图形与新图形其他部分变透明</li>
+<li>lighter：原有图形与新图形都绘制，重叠部分加色处理</li>
+<li>xor：只绘制原、新图形不重叠之处，其他做透明色</li>
+<li>copy：只绘制新图形，覆盖掉原图</li>
+</ul>
+
+<h3 id="toc_2">实例:刮彩票</h3>
+
+<ul>
+<li>注意点style.left获取的是字符串(带px),offsetLeft获取的是数值</li>
+</ul>
+
+<div><pre><code class="language-none">&lt;div class=&quot;wrap&quot;&gt;
+    谢谢惠顾!
+    &lt;canvas&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+
+var wrap = document.querySelector(&quot;.wrap&quot;);
+    var canvas = wrap.children[0];
+    //设置canvas的实际宽度和高度
+    canvas.width = wrap.clientWidth;
+    canvas.height = wrap.clientHeight;
+    var ctx = canvas.getContext(&quot;2d&quot;);
+    //填充画布颜色
+    ctx.fillStyle = &quot;#ccc&quot;;
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    canvas.onmousedown = function(e){
+        var disX = wrap.offsetLeft-1;//-1是减去边框
+        var disY = wrap.offsetTop-1;
+        ctx.globalCompositeOperation = &quot;destination-out&quot;;
+        ctx.beginPath();
+        document.onmousemove = function(e){
+            var x = e.clientX - disX;
+            var y = e.clientY - disY;
+            
+            // ctx.arc(x,y,5,0,Math.PI*2);
+            ctx.lineWidth = 10;
+            ctx.lineCap = &quot;round&quot;;
+            ctx.lineTo(x,y);
+            ctx.stroke();
+        }
+        return false;
+    }
+    document.onmouseup = function(){
+        document.onmousemove = &quot;&quot;;
+    }</code></pre></div>
+
+<h2 id="toc_3">createPattern是图片的平铺</h2>
+
+<ul>
+<li>createPattern(img,type)</li>
+<li>img：图片</li>
+<li>type：
+   1) repeat整个画布平铺
+   2) repeat-x在x轴方向上平铺
+   3) repeat-y在y轴方向上平铺
+   4) no-repeat不平铺</li>
+<li>注意点:img是有onload事件
+##.clip()剪切</li>
+</ul>
+
+<div><pre><code class="language-none">    var canvas = document.querySelector(&quot;canvas&quot;);
+    var ctx = canvas.getContext(&quot;2d&quot;);
+    var img = document.querySelector(&quot;img&quot;);
+    ctx.rect(100,100,400,400);//画一个空心矩形
+    ctx.clip();//剪切
+    img.onload = function(){
+        var c = ctx.createPattern(img,&quot;repeat&quot;);
+        ctx.fillStyle = c;
+        ctx.fillRect(0,0,800,800);
+    }</code></pre></div>
+
+<h2 id="toc_4">drawImage</h2>
+
+<ul>
+<li><p>绘制图像：把图片绘制在画布上面drawImage(img,x,y)</p>
+
+<blockquote>
+<p>1)img：图片<br>
+2)x：图片横坐标的起始值<br>
+3)y：图片纵坐标的起始值</p>
+</blockquote></li>
+<li><p>绘制固定宽高的图像：drawImage(img,x,y,w,h)</p>
+
+<blockquote>
+<p>1)img：图片;<br>
+2)x：图片横坐标的起始值;<br>
+3)y：图片纵坐标的起始值;
+4)w：在画布中图片显示的宽度;<br>
+5)h：在画布中图片显示的高度;</p>
+</blockquote></li>
+<li><p>复制或放大图像局部：drawImage(img,x,y,w,h,rx,ry,rw,rh)</p>
+
+<blockquote>
+<p>1)img：图片
+2)x、y：源图片的坐标<br>
+3)w、h：在源图片上裁剪的宽、高
+4)rx、ry：显示在画布中的坐标<br>
+5)rw、rh：显示在画布中的宽、高 </p>
+</blockquote></li>
+</ul>
+
+<h2 id="toc_5">getImageData,putImageData和DataURL必须要再服务器上跑</h2>
+
+<ul>
+<li>getImageData 是对应rgba</li>
+<li>getImageData的参数有4个,putImageData的参数有3(像drawImage)</li>
+<li>.data是获取像素点数据</li>
+<li>注意点:颜色的取反 255-num 和 num 是相反颜色</li>
+<li>例如:rgb(0,0,0)--(黑色) 那么rgb(255,255,255)--(白色)</li>
+<li>把canvas里面的图片数据转成base64的地址数据格式  base64是可以加密也可以解密</li>
+</ul>
+
+<div><pre><code class="language-none">    var btn = document.querySelector(&#39;button&#39;);
+    var canvas = document.getElementsByTagName(&#39;canvas&#39;)[0];
+    var img = document.getElementsByTagName(&#39;img&#39;)[0];
+    var ctx = canvas.getContext(&#39;2d&#39;);
+    img.onload = function(){
+        //获取画板像素点数据
+        ctx.drawImage(img,0,0);
+        var imageData = ctx.getImageData(0,0,100,203);
+        // console.log(data);
+        //颜色取反 255-本来颜色=取反的颜色
+        //换为黑白色
+        for (var i = 0;i&lt;imageData.data.length; i+=4) {
+            var c = imageData.data[i]*.3+imageData.data[i+1]*.59+imageData.data[i+2]*.11;//是黑白
+
+            imageData.data[i] = c;
+            imageData.data[i+1] = c;
+            imageData.data[i+2] = c;
+        }
+        &lt;!--是获取颜色的反色
+        for (var i = 0;i&lt;imageData.data.length; i+=4) {//为什么加4 rgba a:255
+            imageData.data[i] = 255-imageData.data[i];//r
+            imageData.data[i+1] = 255-imageData.data[i+1];//g
+            imageData.data[i+2] = 255-imageData.data[i+2];//b
+        }--&gt;
+        
+        ctx.putImageData(imageData,0,0);
+        //把canvas里面的图片数据转成base64的地址数据格式  base64是可以加密也可以解密
+        var url = canvas.toDataURL(&quot;image/png&quot;);
+        console.log(url);
+    }</code></pre></div>
+
+<h2 id="toc_6">时钟实例</h2>
+
+<div><pre><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    canvas{
+        border:1px solid black;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;canvas width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var canvas = document.querySelector(&quot;canvas&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+ctx.translate(200,200);
+
+//画背景
+bg();
+function bg(){
+    var deg = 0;
+    var r = 150;
+    ctx.beginPath();
+    for (var i = 0;i &lt; 13;i++) {
+        // setInterval(function(){ //看动画效果
+        deg += 30;
+        var x = Math.sin(Math.PI/180*deg)*r;
+        var y = -Math.cos(Math.PI/180*deg)*r;
+        
+        ctx.lineTo(x,y);
+        // ctx.arc(x,y,5,0,Math.PI*2);
+        // ctx.stroke();
+
+        // },30);
+    }
+    
+    ctx.closePath();
+    //填充颜色
+    var c = ctx.createRadialGradient(0,0,0,0,0,150);
+    c.addColorStop(0,&quot;#22f&quot;);
+    c.addColorStop(1,&quot;#0ef&quot;);
+    ctx.fillStyle = c;
+    ctx.fill();
+}
+
+//画刻度
+kedu();
+function kedu(){
+    var deg = 0;
+    for (var i = 0;i &lt; 60;i++) {
+        ctx.save();
+        ctx.rotate(Math.PI/30*i);
+        ctx.beginPath();
+        ctx.moveTo(0,-150);
+        if (i%5==0) {
+            ctx.lineWidth = 5;
+            ctx.lineTo(0,-135);
+        }else{
+            ctx.lineWidth = 3;
+            ctx.lineTo(0,-138);
+        }   
+        ctx.strokeStyle = &quot;white&quot;;
+        ctx.stroke();
+        ctx.restore();
+    }
+}
+
+//画数字
+num();
+function num(){
+    for (var i = 1;i &lt; 13;i++) {
+        // ctx.save();
+        // ctx.rotate(Math.PI/6*i);
+        var x = Math.sin(Math.PI/6*i)*120;
+        var y = -Math.cos(Math.PI/6*i)*120;
+        ctx.font = &quot;20px 黑体&quot;;
+        ctx.textBaseline = &quot;middle&quot;;
+        ctx.textAlign = &quot;center&quot;;
+        ctx.fillStyle = &quot;white&quot;;
+        ctx.fillText(i,x,y+3);
+        // ctx.restore();
+    }
+}
+
+function sFn(deg){
+    ctx.save();
+    ctx.rotate(Math.PI/180*deg);
+    ctx.beginPath();
+    ctx.moveTo(0,5);
+    ctx.lineTo(0,-120);
+    ctx.strokeStyle = &quot;white&quot;;
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+}
+
+//分针
+// mFn(30);
+function mFn(deg){
+    ctx.save();
+    ctx.rotate(Math.PI/180*deg);
+    ctx.beginPath();
+    ctx.moveTo(0,5);
+    ctx.lineTo(0,-100);
+    ctx.strokeStyle = &quot;white&quot;;
+    ctx.lineCap = &quot;round&quot;;//让线的两边变为圆
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+}
+
+// hFn(60);
+function hFn(deg){
+    ctx.save();
+    ctx.rotate(Math.PI/180*deg);
+    ctx.beginPath();
+    ctx.moveTo(0,5);//-2.5是想让旋转更为中心点
+    ctx.lineTo(0,-80);
+    ctx.strokeStyle = &quot;white&quot;;
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
+}
+//针
+setInterval(function(){
+    var date = new Date();
+    var s = date.getSeconds();
+    var m = date.getMinutes();
+    var h = date.getHours();
+    ctx.clearRect(-200,-200,400,400);
+    bg();
+    kedu();
+    num();
+    
+    sFn(s*6);
+    mFn(m*6);
+    hFn(h*30+m*6/360*30);
+},1000);
+&lt;/script&gt;
+&lt;/html&gt;</code></pre></div>
+
+
+
+
+</body>
+
+</html>
