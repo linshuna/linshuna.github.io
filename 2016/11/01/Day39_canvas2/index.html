@@ -1,0 +1,623 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="图形的组合方式
+source-over：为属性globalCompositeOperation属性的默认值表示新图形覆盖在原图形之上
+source-atop：只绘制新图形与原图形相重叠的部分，以及原图形其他部分
+source-in：只绘制新图形与原图形重叠的部分，新图形与原图形其他部分变透明
+source-out：只绘制新图形与原图形不重叠的部分；新图形与原图形其他部分变透明
+destinatio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas">
+<meta property="og:url" content="http://yoursite.com/2016/11/01/Day39_canvas2/index.html">
+<meta property="og:site_name" content="Susan">
+<meta property="og:description" content="图形的组合方式
+source-over：为属性globalCompositeOperation属性的默认值表示新图形覆盖在原图形之上
+source-atop：只绘制新图形与原图形相重叠的部分，以及原图形其他部分
+source-in：只绘制新图形与原图形重叠的部分，新图形与原图形其他部分变透明
+source-out：只绘制新图形与原图形不重叠的部分；新图形与原图形其他部分变透明
+destinatio">
+<meta property="og:updated_time" content="2016-12-24T09:15:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="canvas">
+<meta name="twitter:description" content="图形的组合方式
+source-over：为属性globalCompositeOperation属性的默认值表示新图形覆盖在原图形之上
+source-atop：只绘制新图形与原图形相重叠的部分，以及原图形其他部分
+source-in：只绘制新图形与原图形重叠的部分，新图形与原图形其他部分变透明
+source-out：只绘制新图形与原图形不重叠的部分；新图形与原图形其他部分变透明
+destinatio">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/01/Day39_canvas2/"/>
+
+
+  <title> canvas | Susan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Susan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                canvas
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-11-01T20:49:57+08:00" content="2016-11-01">
+              2016-11-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="图形的组合方式"><a href="#图形的组合方式" class="headerlink" title="图形的组合方式"></a>图形的组合方式</h2><ul>
+<li>source-over：为属性globalCompositeOperation属性的默认值表示新图形覆盖在原图形之上</li>
+<li>source-atop：只绘制新图形与原图形相重叠的部分，以及原图形其他部分</li>
+<li>source-in：只绘制新图形与原图形重叠的部分，新图形与原图形其他部分变透明</li>
+<li>source-out：只绘制新图形与原图形不重叠的部分；新图形与原图形其他部分变透明</li>
+<li>destination-over：表示原图形覆盖在新图形之上destination-atop：只绘制原图形与新图形相重叠的部分，以及新图形其他部分</li>
+<li>destination-in：只绘制原图形与新图形重叠的部分，原图形与新图形其他部分变透明</li>
+<li>destination-out：只绘制原图形与新图形不重叠的部分；原图形与新图形其他部分变透明</li>
+<li>lighter：原有图形与新图形都绘制，重叠部分加色处理</li>
+<li>xor：只绘制原、新图形不重叠之处，其他做透明色</li>
+<li>copy：只绘制新图形，覆盖掉原图</li>
+</ul>
+<h3 id="实例-刮彩票"><a href="#实例-刮彩票" class="headerlink" title="实例:刮彩票"></a>实例:刮彩票</h3><ul>
+<li>注意点style.left获取的是字符串(带px),offsetLeft获取的是数值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;wrap&quot;&gt;</div><div class="line">	谢谢惠顾!</div><div class="line">	&lt;canvas&gt;&lt;/canvas&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">var wrap = document.querySelector(&quot;.wrap&quot;);</div><div class="line">	var canvas = wrap.children[0];</div><div class="line">	//设置canvas的实际宽度和高度</div><div class="line">	canvas.width = wrap.clientWidth;</div><div class="line">	canvas.height = wrap.clientHeight;</div><div class="line">	var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">	//填充画布颜色</div><div class="line">	ctx.fillStyle = &quot;#ccc&quot;;</div><div class="line">	ctx.fillRect(0,0,canvas.width,canvas.height);</div><div class="line">	canvas.onmousedown = function(e)&#123;</div><div class="line">		var disX = wrap.offsetLeft-1;//-1是减去边框</div><div class="line">		var disY = wrap.offsetTop-1;</div><div class="line">		ctx.globalCompositeOperation = &quot;destination-out&quot;;</div><div class="line">		ctx.beginPath();</div><div class="line">		document.onmousemove = function(e)&#123;</div><div class="line">			var x = e.clientX - disX;</div><div class="line">			var y = e.clientY - disY;</div><div class="line">			</div><div class="line">			// ctx.arc(x,y,5,0,Math.PI*2);</div><div class="line">			ctx.lineWidth = 10;</div><div class="line">			ctx.lineCap = &quot;round&quot;;</div><div class="line">			ctx.lineTo(x,y);</div><div class="line">			ctx.stroke();</div><div class="line">		&#125;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	document.onmouseup = function()&#123;</div><div class="line">		document.onmousemove = &quot;&quot;;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="createPattern是图片的平铺"><a href="#createPattern是图片的平铺" class="headerlink" title="createPattern是图片的平铺"></a>createPattern是图片的平铺</h2><ul>
+<li>createPattern(img,type)</li>
+<li>img：图片</li>
+<li>type：<pre><code>1) repeat整个画布平铺
+2) repeat-x在x轴方向上平铺
+3) repeat-y在y轴方向上平铺
+4) no-repeat不平铺
+</code></pre></li>
+<li>注意点:img是有onload事件<br>##.clip()剪切</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var canvas = document.querySelector(&quot;canvas&quot;);</div><div class="line">var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">var img = document.querySelector(&quot;img&quot;);</div><div class="line">ctx.rect(100,100,400,400);//画一个空心矩形</div><div class="line">ctx.clip();//剪切</div><div class="line">img.onload = function()&#123;</div><div class="line">	var c = ctx.createPattern(img,&quot;repeat&quot;);</div><div class="line">	ctx.fillStyle = c;</div><div class="line">	ctx.fillRect(0,0,800,800);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="drawImage"><a href="#drawImage" class="headerlink" title="drawImage"></a>drawImage</h2><ul>
+<li><p>绘制图像：把图片绘制在画布上面drawImage(img,x,y)</p>
+<blockquote>
+<p>1)img：图片<br>2)x：图片横坐标的起始值<br>3)y：图片纵坐标的起始值</p>
+</blockquote>
+</li>
+<li><p>绘制固定宽高的图像：drawImage(img,x,y,w,h)</p>
+<blockquote>
+<p>1)img：图片;<br>2)x：图片横坐标的起始值;<br>3)y：图片纵坐标的起始值;<br>4)w：在画布中图片显示的宽度;<br>5)h：在画布中图片显示的高度;</p>
+</blockquote>
+</li>
+<li><p>复制或放大图像局部：drawImage(img,x,y,w,h,rx,ry,rw,rh)</p>
+<blockquote>
+<p>1)img：图片<br>2)x、y：源图片的坐标<br>3)w、h：在源图片上裁剪的宽、高<br>4)rx、ry：显示在画布中的坐标<br>5)rw、rh：显示在画布中的宽、高 </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="getImageData-putImageData和DataURL必须要再服务器上跑"><a href="#getImageData-putImageData和DataURL必须要再服务器上跑" class="headerlink" title="getImageData,putImageData和DataURL必须要再服务器上跑"></a>getImageData,putImageData和DataURL必须要再服务器上跑</h2><ul>
+<li>getImageData 是对应rgba</li>
+<li>getImageData的参数有4个,putImageData的参数有3(像drawImage)</li>
+<li>.data是获取像素点数据</li>
+<li>注意点:颜色的取反 255-num 和 num 是相反颜色</li>
+<li>例如:rgb(0,0,0)–(黑色) 那么rgb(255,255,255)–(白色)</li>
+<li>把canvas里面的图片数据转成base64的地址数据格式  base64是可以加密也可以解密</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">var btn = document.querySelector(&apos;button&apos;);</div><div class="line">var canvas = document.getElementsByTagName(&apos;canvas&apos;)[0];</div><div class="line">var img = document.getElementsByTagName(&apos;img&apos;)[0];</div><div class="line">var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">img.onload = function()&#123;</div><div class="line">	//获取画板像素点数据</div><div class="line">	ctx.drawImage(img,0,0);</div><div class="line">	var imageData = ctx.getImageData(0,0,100,203);</div><div class="line">	// console.log(data);</div><div class="line">	//颜色取反 255-本来颜色=取反的颜色</div><div class="line">	//换为黑白色</div><div class="line">	for (var i = 0;i&lt;imageData.data.length; i+=4) &#123;</div><div class="line">		var c = imageData.data[i]*.3+imageData.data[i+1]*.59+imageData.data[i+2]*.11;//是黑白</div><div class="line"></div><div class="line">		imageData.data[i] = c;</div><div class="line">		imageData.data[i+1] = c;</div><div class="line">		imageData.data[i+2] = c;</div><div class="line">	&#125;</div><div class="line">	&lt;!--是获取颜色的反色</div><div class="line">	for (var i = 0;i&lt;imageData.data.length; i+=4) &#123;//为什么加4 rgba a:255</div><div class="line">		imageData.data[i] = 255-imageData.data[i];//r</div><div class="line">		imageData.data[i+1] = 255-imageData.data[i+1];//g</div><div class="line">		imageData.data[i+2] = 255-imageData.data[i+2];//b</div><div class="line">	&#125;--&gt;</div><div class="line">	</div><div class="line">	ctx.putImageData(imageData,0,0);</div><div class="line">	//把canvas里面的图片数据转成base64的地址数据格式  base64是可以加密也可以解密</div><div class="line">	var url = canvas.toDataURL(&quot;image/png&quot;);</div><div class="line">	console.log(url);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="时钟实例"><a href="#时钟实例" class="headerlink" title="时钟实例"></a>时钟实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">	canvas&#123;</div><div class="line">		border:1px solid black;</div><div class="line">	&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;canvas width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var canvas = document.querySelector(&quot;canvas&quot;);</div><div class="line">var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">ctx.translate(200,200);</div><div class="line"></div><div class="line">//画背景</div><div class="line">bg();</div><div class="line">function bg()&#123;</div><div class="line">	var deg = 0;</div><div class="line">	var r = 150;</div><div class="line">	ctx.beginPath();</div><div class="line">	for (var i = 0;i &lt; 13;i++) &#123;</div><div class="line">		// setInterval(function()&#123; //看动画效果</div><div class="line">		deg += 30;</div><div class="line">		var x = Math.sin(Math.PI/180*deg)*r;</div><div class="line">		var y = -Math.cos(Math.PI/180*deg)*r;</div><div class="line">		</div><div class="line">		ctx.lineTo(x,y);</div><div class="line">		// ctx.arc(x,y,5,0,Math.PI*2);</div><div class="line">		// ctx.stroke();</div><div class="line"></div><div class="line">		// &#125;,30);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	ctx.closePath();</div><div class="line">	//填充颜色</div><div class="line">	var c = ctx.createRadialGradient(0,0,0,0,0,150);</div><div class="line">	c.addColorStop(0,&quot;#22f&quot;);</div><div class="line">	c.addColorStop(1,&quot;#0ef&quot;);</div><div class="line">	ctx.fillStyle = c;</div><div class="line">	ctx.fill();</div><div class="line">&#125;</div><div class="line"></div><div class="line">//画刻度</div><div class="line">kedu();</div><div class="line">function kedu()&#123;</div><div class="line">	var deg = 0;</div><div class="line">	for (var i = 0;i &lt; 60;i++) &#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.rotate(Math.PI/30*i);</div><div class="line">		ctx.beginPath();</div><div class="line">		ctx.moveTo(0,-150);</div><div class="line">		if (i%5==0) &#123;</div><div class="line">			ctx.lineWidth = 5;</div><div class="line">			ctx.lineTo(0,-135);</div><div class="line">		&#125;else&#123;</div><div class="line">			ctx.lineWidth = 3;</div><div class="line">			ctx.lineTo(0,-138);</div><div class="line">		&#125;	</div><div class="line">		ctx.strokeStyle = &quot;white&quot;;</div><div class="line">		ctx.stroke();</div><div class="line">		ctx.restore();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//画数字</div><div class="line">num();</div><div class="line">function num()&#123;</div><div class="line">	for (var i = 1;i &lt; 13;i++) &#123;</div><div class="line">		// ctx.save();</div><div class="line">		// ctx.rotate(Math.PI/6*i);</div><div class="line">		var x = Math.sin(Math.PI/6*i)*120;</div><div class="line">		var y = -Math.cos(Math.PI/6*i)*120;</div><div class="line">		ctx.font = &quot;20px 黑体&quot;;</div><div class="line">		ctx.textBaseline = &quot;middle&quot;;</div><div class="line">		ctx.textAlign = &quot;center&quot;;</div><div class="line">		ctx.fillStyle = &quot;white&quot;;</div><div class="line">		ctx.fillText(i,x,y+3);</div><div class="line">		// ctx.restore();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sFn(deg)&#123;</div><div class="line">	ctx.save();</div><div class="line">	ctx.rotate(Math.PI/180*deg);</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.moveTo(0,5);</div><div class="line">	ctx.lineTo(0,-120);</div><div class="line">	ctx.strokeStyle = &quot;white&quot;;</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.closePath();</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div><div class="line"></div><div class="line">//分针</div><div class="line">// mFn(30);</div><div class="line">function mFn(deg)&#123;</div><div class="line">	ctx.save();</div><div class="line">	ctx.rotate(Math.PI/180*deg);</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.moveTo(0,5);</div><div class="line">	ctx.lineTo(0,-100);</div><div class="line">	ctx.strokeStyle = &quot;white&quot;;</div><div class="line">	ctx.lineCap = &quot;round&quot;;//让线的两边变为圆</div><div class="line">	ctx.lineWidth = 3;</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.closePath();</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div><div class="line"></div><div class="line">// hFn(60);</div><div class="line">function hFn(deg)&#123;</div><div class="line">	ctx.save();</div><div class="line">	ctx.rotate(Math.PI/180*deg);</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.moveTo(0,5);//-2.5是想让旋转更为中心点</div><div class="line">	ctx.lineTo(0,-80);</div><div class="line">	ctx.strokeStyle = &quot;white&quot;;</div><div class="line">	ctx.lineWidth = 5;</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.closePath();</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div><div class="line">//针</div><div class="line">setInterval(function()&#123;</div><div class="line">	var date = new Date();</div><div class="line">	var s = date.getSeconds();</div><div class="line">	var m = date.getMinutes();</div><div class="line">	var h = date.getHours();</div><div class="line">	ctx.clearRect(-200,-200,400,400);</div><div class="line">	bg();</div><div class="line">	kedu();</div><div class="line">	num();</div><div class="line">	</div><div class="line">	sFn(s*6);</div><div class="line">	mFn(m*6);</div><div class="line">	hFn(h*30+m*6/360*30);</div><div class="line">&#125;,1000);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/09/php3(sql:array:string方法)/" rel="prev" title="php上传文件">
+                php上传文件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Susan" />
+          <p class="site-author-name" itemprop="name">Susan</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#图形的组合方式"><span class="nav-number">1.</span> <span class="nav-text">图形的组合方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例-刮彩票"><span class="nav-number">1.1.</span> <span class="nav-text">实例:刮彩票</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#createPattern是图片的平铺"><span class="nav-number">2.</span> <span class="nav-text">createPattern是图片的平铺</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#drawImage"><span class="nav-number">3.</span> <span class="nav-text">drawImage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getImageData-putImageData和DataURL必须要再服务器上跑"><span class="nav-number">4.</span> <span class="nav-text">getImageData,putImageData和DataURL必须要再服务器上跑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时钟实例"><span class="nav-number">5.</span> <span class="nav-text">时钟实例</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Susan</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,930 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Susan">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Susan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Susan">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+  <title> Susan </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Susan</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/09/php3(sql:array:string方法)/" itemprop="url">
+                  php上传文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-11-09T17:56:26+08:00" content="2016-11-09">
+              2016-11-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、文件上传的相关配置"><a href="#一、文件上传的相关配置" class="headerlink" title="一、文件上传的相关配置"></a>一、文件上传的相关配置</h2><ul>
+<li><p>表单设置<br>要进行文件的上传，需要对form表单进行特殊设置;</p>
+<ol>
+<li>设定表单数据的提交方式为POST</li>
+<li>设定enctype属性值为: multipart/form-data </li>
+<li>为了避免用户等待许久之后才发现上传文件太大，可以在表单中添加<br>MAX_FILE_SIZE隐藏域,通过设置其value值可以限制上传文件的大小;</li>
+</ol>
+</li>
+<li><p>PHP设置<br>   phpinfo();输出PHP设置信息</p>
+<ol>
+<li><p>file_uploads<br>是否允许通过HTTP上传文件，默认为ON</p>
+</li>
+<li><p>upload_max_filesize<br>允许上传文件大小的最大值，默认为2M，此指令必须小于post_max_size;</p>
+</li>
+<li><p>upload_tmp_dir<br>指定上传文件的临时存放路径，这个目录对于拥有此服务器进程的用户必须是可<br>写的;如果未指定则使用系统默认值;</p>
+</li>
+<li><p>post_max_size<br>控制POST方式提交数据php所能够接收的最大数据量;    </p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="二、-FILES-数组"><a href="#二、-FILES-数组" class="headerlink" title="二、$_FILES 数组"></a>二、$_FILES 数组</h2><ul>
+<li><p>$_FILES超级全局变量作用是存储各种与上传文件有关的信息;<br>  $_FILES是一个二维数组，数组中共有5项：</p>
+<ol>
+<li><p>$_FILES[“userfile”][“name”]    上传文件的名称</p>
+</li>
+<li><p>$_FILES[“userfile”][“type”]     上传文件的类型</p>
+</li>
+<li><p>$_FILES[“userfile”][“size”]     上传文件的大小, 以字节为单位</p>
+</li>
+<li><p>$_FILES[“userfile”][“tmp_name”]    文件上传后在服务器端储存的临时文件名</p>
+</li>
+<li><p>$_FILES[“userfile”][“error”]     文件上传相关的错误代码</p>
+<blockquote>
+<p>注:userfile只是一个占位符，代表文件上传表单元素的名字; 因此这个值将根据你所给定<br>的名称有所不同;</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="三、上传错误信息"><a href="#三、上传错误信息" class="headerlink" title="三、上传错误信息"></a>三、上传错误信息</h2><ul>
+<li><p>$_FILES[‘userfile’][‘error’]  提供了在文件上传过程中出现的错误：</p>
+<ol>
+<li><p>UPLOAD_ERR_OK (value = 0)      如果文件上传成功返回0;</p>
+</li>
+<li><p>UPLOAD_ERR_INI_SIZE (value = 1)<br>如果试图上传的文件大小超出了 upload_max_filesize指令指定的值，则返回1;</p>
+</li>
+<li><p>UPLOAD_ERR_FORM_SIZE (value = 2)<br>如果试图上传的文件大小超出了MAX_FILE_SIZE指令（可能嵌入在HTML表单中）指定的值，<br>则返回2;</p>
+</li>
+<li><p>UPLOAD_ERR_PARTIAL (value = 3)<br>如果文件没有完全上传，则返回3; 如网络出现错误，导致上传过程中断;</p>
+</li>
+<li><p>UPLOAD_ERR_NO_FILE (value = 4)<br>如果用户没有指定上传的文件就提交表单，则返回</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="四、文件上传函数"><a href="#四、文件上传函数" class="headerlink" title="四、文件上传函数"></a>四、文件上传函数</h2><pre><code>1. is_uploaded_file()
+    is_uploaded_file()函数确定参数filename指定的文件是否使用HTTP POST上传;
+    `例：
+    $file = $_FILES[&quot;file&quot;];
+    print_r($file);
+    if(is_uploaded_file($file[&apos;tmp_name&apos;])){
+        copy($file[&apos;tmp_name&apos;],&quot;test2.txt&quot;);
+    }else{
+        echo &quot;文件上传失败！&quot;;
+    }`
+
+2. move_uploaded_file()
+    move_uploaded_file()作用是将上传文件从临时目录移动到目标目录; 虽然
+    copy()也可以实现同样功能，但move_uploaded_file()还提供了一种额外的
+    功能，它将检查由filename输入参数指定的文件确实是通过http post 上传机制
+    上传的。如果所指定的文件并非上传文件，则移动失败，返回false;
+
+    `例：
+    move_uploaded_file($_FILES[&apos;userfile&apos;][&apos;tmp_name&apos;],&quot;1/test.jpg&quot;);`        
+</code></pre><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="一-数组的概念："><a href="#一-数组的概念：" class="headerlink" title="一.数组的概念："></a>一.数组的概念：</h2><p>数组可以理解为有序的（键-值)对组成的数据值的集合;</p>
+<blockquote>
+<p>如果我们把变量理解为单个值的容器，那么数组就是可以包含多个值的容器;根据索引值的不同数组分为：索引数组和关联数组;<br>    <code>array(key =&gt; value,key =&gt; value)</code></p>
+</blockquote>
+<h2 id="二-创建数组"><a href="#二-创建数组" class="headerlink" title="二.创建数组"></a>二.创建数组</h2><p>与其它语言的数组实现方式不同，php不需要在创建数组时指定其大小;<br>因为php是一种松散类型的语言，所以甚至不需要在使用前先声明;</p>
+<ul>
+<li><p>索引可以是整型数字或者是字符串;</p>
+<ol>
+<li>索引数组：索引为整数,如果没有指定索引值则默认为零，依次递增;</li>
+<li><p>关联数组：索引为字符串的数组;</p>
+<p>直接对数组变量赋值<br><code>$arr[key] = value; //高版本[value]</code></p>
+</li>
+</ol>
+</li>
+<li><p>使用函数创建数组:range() 建立一个包含指定范围单元的数组</p>
+</li>
+</ul>
+<h2 id="三、删除-数组或数组元素"><a href="#三、删除-数组或数组元素" class="headerlink" title="三、删除 数组或数组元素"></a>三、删除 数组或数组元素</h2><ul>
+<li>unset 释放给定的变量<blockquote>
+<p>注意：删除数组元素不会重建索引;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$arr = array(1,2,3,4,5);</div><div class="line">unset($arr[1]);</div><div class="line">// $arr1 = array_values($arr);//重新要排序下标</div><div class="line">print_r($arr);</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h2 id="四、常用的数组函数"><a href="#四、常用的数组函数" class="headerlink" title="四、常用的数组函数"></a>四、常用的数组函数</h2><ol>
+<li>print_r() 打印数组</li>
+<li>count() 取得数组大小</li>
+<li>in_array() 检查数组中是否包含某个值<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$arr = array(1,2,3,4,5);</div><div class="line">if (in_array(11, $arr)) &#123;</div><div class="line">	echo &quot;有&quot;;</div><div class="line">&#125;else&#123;</div><div class="line">	echo &quot;没有&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="五、遍历数组"><a href="#五、遍历数组" class="headerlink" title="五、遍历数组"></a>五、遍历数组</h2><p><code>arr = [A,B,C,D,E,F]</code></p>
+<pre><code>1. for 循环遍历数组
+2. foreach 循环遍历数组
+3. 使用数组指针遍历数组    
+    * key()         返回数组当前指针元素的索引;
+    * current()     返回数组当前指针元素的值;
+    * next()         将数组指针向前移动一位，并返回当前指针元素的值; 如果超出了数组元素的末尾，则返回FALSE
+    * prev()         将数组指针往回移动一位, 并返回当前指针元素的值; 如果指针本来就位于数组的第一个位置则返回FALSE;
+    * reset()     将指针指向第一个元素，并返回第一个元素的值
+    * end()         将数组指针指向最后一个元素, 并返回最后一个元素的值;
+    * each()         返回数组当前指针元素的键和值,并将指针推进一个位置;如果内部指针越过了数组的末端，则 each() 返回 FALSE。 
+
+&gt;next()和each()的区别next返回值,each返回键和值(数组)
+</code></pre><h2 id="六、数组排序"><a href="#六、数组排序" class="headerlink" title="六、数组排序"></a>六、数组排序</h2><pre><code>1. sort() 、 rsort() 对数组的value值进行升序和降序
+2. ksort()、krsort() 对数组按索引进行升序或降序, 并保持索引关系
+</code></pre><h2 id="七、字符串与数组转换"><a href="#七、字符串与数组转换" class="headerlink" title="七、字符串与数组转换"></a>七、字符串与数组转换</h2><pre><code>1. explode() 返回由字符串组成的数组 
+2. implode() 将数组元素连接成字符串
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$str = &quot;a,b,c,d,e&quot;;</div><div class="line">$arr = explode(&quot;,&quot;, $str);//不加要劈开的标点,会报错</div><div class="line">print_r($arr);</div><div class="line">echo &quot;&lt;br&gt;&quot;;</div><div class="line">$str2 = implode(&quot;&quot;, $arr);//类似js的join</div><div class="line">echo $str2;</div></pre></td></tr></table></figure>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="一、输出字符串"><a href="#一、输出字符串" class="headerlink" title="一、输出字符串"></a>一、输出字符串</h2><ol>
+<li>echo 是一个语法 ，不是函数<pre><code>echo 没有返回值;
+echo 可以输出多个值，使用逗号分隔;
+</code></pre></li>
+<li><p>print     实际上不是一个函数（它是一个语言结构）</p>
+</li>
+<li><p>printf() parseInt(10.55,”8”);//将10.55转化为8进制</p>
+<ul>
+<li>%b二进制输出        //brianry</li>
+<li>%d整数输出            //data</li>
+<li>%f浮点数输出        //float</li>
+<li>%s字符串输出          //string</li>
+<li>printf(“整数：%d”, $str);</li>
+<li>printf(“浮点数：%.2f”, $str);</li>
+<li>printf(“字符串：%s”, $str);</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">printf(&quot;二进制:%b&quot;,100);//11001100</div><div class="line">printf(&quot;二进制:%b&quot;,1);//1</div><div class="line">printf(&quot;整数:%d&quot;,10.451);//10</div><div class="line">printf(&quot;浮点数:%.2f&quot;,10.451);//10.45</div></pre></td></tr></table></figure>
+</li>
+<li><p>sprintf() 功能与printf相同，但不会直接输出结果;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$num = sprintf(&quot;%d&quot;,6.21);//不用echo输出,是不会输出的</div><div class="line">echo $num;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="二、查找与替换"><a href="#二、查找与替换" class="headerlink" title="二、查找与替换"></a>二、查找与替换</h2><ol>
+<li>strpos()</li>
+</ol>
+<blockquote>
+<p>stripos()与strpos()功能相同，只是查找时不区别大小写 </p>
+<p>第一次出现的位置;如果没有找到则返回FALSE;//类似indexof</p>
+</blockquote>
+<ol>
+<li>str_replace() </li>
+</ol>
+<blockquote>
+<p>str_ireplace()与str_replace()功能相同，只是不区分大小写;<br>str_replace(find,change,str)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$str = &quot;abcdefgdedc&quot;;</div><div class="line">$index = 0;</div><div class="line">$count = 0;</div><div class="line">$num = strpos($str,&quot;d&quot;,$index);//4是从第几个开始找 str.indexOf(&quot;d&quot;,0);</div><div class="line">//类似找父级定位,找d的个数</div><div class="line">while ($num) &#123;</div><div class="line">	$count++;</div><div class="line">	$index = $num+1;</div><div class="line">	// echo $index.&quot;&lt;br&gt;&quot;;//4 8 10</div><div class="line">	$num = strpos($str, &quot;d&quot;,$index);//下一次</div><div class="line">&#125;</div><div class="line">echo $count;//3</div></pre></td></tr></table></figure>
+<h2 id="三、截取字符串-substr"><a href="#三、截取字符串-substr" class="headerlink" title="三、截取字符串    substr()"></a>三、截取字符串    substr()</h2><ul>
+<li>从start位置取出length长度的字符，字符串位置开始值为零;<br> 如果没有指定length，那么默认一直到字符串末尾;<br> <code>$str = &quot;abcdefdabkjldf&quot;;
+ echo substr($str,3,1);//从第三个开始截取,第三个参数截取的长度</code></li>
+</ul>
+<h2 id="删除字符串"><a href="#删除字符串" class="headerlink" title="删除字符串"></a>删除字符串</h2><ol>
+<li>ltrim 函数删除字符串左侧空格或其他预定义字符;</li>
+<li>rtrim 函数删除字符串右侧空格或其他预定义字符;</li>
+<li>trim 函数删除字符串两侧空格或其他预定义字符;</li>
+</ol>
+<h2 id="四、其它字符串处理函数"><a href="#四、其它字符串处理函数" class="headerlink" title="四、其它字符串处理函数"></a>四、其它字符串处理函数</h2><ol>
+<li>strlen() 获取字符串长度</li>
+<li>strtolower() 将字符串转换为小写字母</li>
+<li>strtoupper() 将字符串转换为大写字母</li>
+<li>strrev() 反转字符串</li>
+<li>nl2br() 将字符串中换行 (\n) 转换成 HTML 换行标签 (<br>)</li>
+<li>strip_tags() 删除字符串中HTML XML PHP 标签</li>
+<li>htmlspecialchars() 函数把一些预定义的字符转换为 HTML 实体</li>
+</ol>
+<h1 id="正则preg-match-preg-replace-preg-split-preg-grep"><a href="#正则preg-match-preg-replace-preg-split-preg-grep" class="headerlink" title="正则preg_match,preg_replace,preg_split,preg_grep"></a>正则preg_match,preg_replace,preg_split,preg_grep</h1><h2 id="preg-match-preg-match-all"><a href="#preg-match-preg-match-all" class="headerlink" title="preg_match/preg_match_all"></a>preg_match/preg_match_all</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$str = &quot;内容1内容2内容3内容4&quot;;</div><div class="line">//preg_match(&quot;/内容/&quot;,$str);//如果找到就返回1</div><div class="line">preg_match_all(&quot;/内容/&quot;, $str, $arr);//将要划分的内容,放到$arr里面</div><div class="line">print_r($arr);</div></pre></td></tr></table></figure>
+<p><mark>实例二</mark></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//获取一个页面的部分东西</div><div class="line">	$con = file_get_contents(&quot;http://www.cnblogs.com/&quot;);</div><div class="line">	$reg = &apos;/&lt;h3\&gt;.+&lt;\/h3&gt;/&apos;;//.表示所有</div><div class="line">	preg_match_all($reg, $con,$arr);</div><div class="line">	print_r($arr);</div></pre></td></tr></table></figure>
+<h2 id="preg-replace"><a href="#preg-replace" class="headerlink" title="preg_replace"></a>preg_replace</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$str = &quot;abc@163.com,abc@163.com&quot;;</div><div class="line">$reg = &apos;/@\d+/&apos;;//js可以不加&quot;&quot;,但是php必须加&quot;&quot;</div><div class="line">$str = preg_replace($reg, &quot;4ddd&quot;, $str);</div><div class="line">echo $str;</div></pre></td></tr></table></figure>
+<h2 id="preg-split"><a href="#preg-split" class="headerlink" title="preg_split"></a>preg_split</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$str = &quot;abc1423de456&quot;;</div><div class="line">// $reg = &quot;/\d+/&quot;;//以数字来劈开</div><div class="line">$reg = &quot;/[a-z]+/&quot;;//以字母来劈开  &quot;,1423,456&quot;;</div><div class="line">$arr = preg_split($reg, $str);</div><div class="line">print_r($arr);</div></pre></td></tr></table></figure>
+<h2 id="preg-grep"><a href="#preg-grep" class="headerlink" title="preg_grep"></a>preg_grep</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//判断是否有数字,由的话就保存起来</div><div class="line">$arr = [12,&apos;abc&apos;,53,&apos;c&apos;,10];</div><div class="line"></div><div class="line">$reg = &apos;/\d/&apos;;</div><div class="line"></div><div class="line">$newarr = preg_grep($reg,$arr);//返回的下标不会变</div><div class="line"></div><div class="line">print_r($newarr);</div></pre></td></tr></table></figure>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="注意的步骤"><a href="#注意的步骤" class="headerlink" title="注意的步骤"></a>注意的步骤</h2><ul>
+<li>md5加密是32个字节</li>
+<li>A_I是自增</li>
+<li>排序规格:utf8_general_ci</li>
+<li>字段数:表示有几列        </li>
+<li>在控制台写代码 ==&gt;执行是ctrl + enter</li>
+<li>再控制台写代码要注意insert into user (<code>username</code>) values (‘ass’) ===&gt;字段名一定要加``</li>
+</ul>
+<h2 id="一、SQL-语言简介"><a href="#一、SQL-语言简介" class="headerlink" title="一、SQL 语言简介"></a>一、SQL 语言简介</h2><ul>
+<li><p>SQL (structured Query Language) 结构化查询语言;<br>主要用途是构造各种数据库系统操作指令，如 SELECT、INSERT、UPDATE、DELETE;</p>
+</li>
+<li><p>SQL命令可以分类以下三大类别：</p>
+</li>
+</ul>
+<ol>
+<li><p>DML(Data Manipulation Language 数据处理语言）：</p>
+<blockquote>
+<p>这类命令主要包括 SELECT、INSERT、UPDATE、DELETE等用来从数据表读出数据，把数据存入数据表或是对数据表里的现有记录进行修改的命令;</p>
+</blockquote>
+</li>
+<li><p>DDL(Data Definition Language 数据定义语言）：</p>
+<blockquote>
+<p>这类命令主要包括CREATE TABLE、ALTER TABLE 等用来定义和改变数据库结构的命令;</p>
+</blockquote>
+</li>
+<li><p>DCL(Data Control Language 数据控制语言）：</p>
+<blockquote>
+<p>这类命令主要包括GRANT、REVOKE以及另外几个用来帮助人们设置和调整MySQL访问控制机制的SQL命令; </p>
+</blockquote>
+</li>
+</ol>
+<h2 id="二、查询-SELECT"><a href="#二、查询-SELECT" class="headerlink" title="二、查询(SELECT)"></a>二、查询(SELECT)</h2><ol>
+<li><p>简单查询<br> <code>SELECT * FROM tablename</code></p>
+</li>
+<li><p>限制查询结果中的数据列个数<br> <code>SELECT column1,column2 FROM tablename</code></p>
+</li>
+<li><p>确定数据表里有多少条数据记录<br> <code>SELECT COUNT(id) FROM tablename</code></p>
+<blockquote>
+<p>//计算的同时改变字段名as:SELECT COUNT(id) as len FROM tablename//把字段名改为len</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="三、WHERE子句"><a href="#三、WHERE子句" class="headerlink" title="三、WHERE子句"></a>三、WHERE子句</h2><ul>
+<li>WHERE子句设置查询条件，过滤掉不需要的数据行。<br>  例如查询年龄大于20的记录： SELECT * FROM usertable WHERE age&gt;20<br>  WHERE子句可包括各种条件运算符：<ol>
+<li>比较运算符<br> `<br> =        等于<blockquote>
+<pre><code>大于
+</code></pre><p>=        大于等于<br> &lt;        小于<br> &lt;=        小于等于<br> &lt;&gt;        不等于`</p>
+</blockquote>
+</li>
+<li>逻辑运算符<ul>
+<li>AND    如果组合的条件都是TRUE,返回TRUE</li>
+<li>OR    如果组合的条件其一是TRUE,返回TRUE</li>
+<li>NOT    如果条件是FALSE,返回TRUE</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="四、限制查询结果中的数据记录个数-LIMIT"><a href="#四、限制查询结果中的数据记录个数-LIMIT" class="headerlink" title="四、限制查询结果中的数据记录个数(LIMIT)"></a>四、限制查询结果中的数据记录个数(LIMIT)</h2><p>LIMIT子句用于强制SELECT语句返回指定的记录数。<br>LIMIT接受一个或两个数字参数。参数必须是一个整数常量。<br><mark>如果给定两个参数，第一个参数指定第一个返回记录行的偏移量，第二个参数指定返回记录行的最大数目。</mark></p>
+<blockquote>
+<p>注意：初始记录行的偏移量是0而不是1。 (适合用于分页)</p>
+</blockquote>
+<pre><code>`例：
+    检索前5个记录行  
+    SELECT * FROM table LIMIT 5;     
+
+    检索记录行 6-15
+    SELECT * FROM table LIMIT 5,10; `
+</code></pre><h2 id="五、对查询结果进行排序-ORDER-BY"><a href="#五、对查询结果进行排序-ORDER-BY" class="headerlink" title="五、对查询结果进行排序 (ORDER BY)"></a>五、对查询结果进行排序 (ORDER BY)</h2><p>  使用ORDER BY子句对查询返回的结果排序。</p>
+<ul>
+<li>ORDER BY子句的语法格式为： ORDER BY {column_name [ASC|DESC]} [,…n] </li>
+<li><p>其中ASC表示升序，为默认值，DESC为降序 </p>
+<p>  <code>例：
+  SELECT * FROM user ORDER BY uid ASC
+  SELECT * FROM user ORDER BY uid DESC
+  SELECT * FROM user ORDER BY regdate DESC,username ASC;</code></p>
+</li>
+</ul>
+<h3 id="六、插入数据记录-INSERT"><a href="#六、插入数据记录-INSERT" class="headerlink" title="六、插入数据记录(INSERT)"></a>六、插入数据记录(INSERT)</h3><pre><code>`例：
+INSERT INTO user (username,password) VALUES (&apos;admin&apos;,&apos;123456&apos;)`
+</code></pre><ul>
+<li>一次插入多条记录<br><code>INSERT INTO user (username, password) VALUES (&#39;user1&#39;, &#39;123456&#39;), (&#39;user2&#39;,&#39;123456&#39;)</code>        </li>
+</ul>
+<h2 id="七、修改数据记录（UPDATE）"><a href="#七、修改数据记录（UPDATE）" class="headerlink" title="七、修改数据记录（UPDATE）"></a>七、修改数据记录（UPDATE）</h2><pre><code>`例：
+UPDATE user
+SET username = &apos;admin1&apos;, passwd =&apos;12345678&apos;  WHERE uid = 10`
+</code></pre><h2 id="八、删除数据记录（DELETE）"><a href="#八、删除数据记录（DELETE）" class="headerlink" title="八、删除数据记录（DELETE）"></a>八、删除数据记录（DELETE）</h2><pre><code>`例：
+DELETE FROM user WHERE uid = 10`
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/01/Day39_canvas2/" itemprop="url">
+                  canvas
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-11-01T20:49:57+08:00" content="2016-11-01">
+              2016-11-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="图形的组合方式"><a href="#图形的组合方式" class="headerlink" title="图形的组合方式"></a>图形的组合方式</h2><ul>
+<li>source-over：为属性globalCompositeOperation属性的默认值表示新图形覆盖在原图形之上</li>
+<li>source-atop：只绘制新图形与原图形相重叠的部分，以及原图形其他部分</li>
+<li>source-in：只绘制新图形与原图形重叠的部分，新图形与原图形其他部分变透明</li>
+<li>source-out：只绘制新图形与原图形不重叠的部分；新图形与原图形其他部分变透明</li>
+<li>destination-over：表示原图形覆盖在新图形之上destination-atop：只绘制原图形与新图形相重叠的部分，以及新图形其他部分</li>
+<li>destination-in：只绘制原图形与新图形重叠的部分，原图形与新图形其他部分变透明</li>
+<li>destination-out：只绘制原图形与新图形不重叠的部分；原图形与新图形其他部分变透明</li>
+<li>lighter：原有图形与新图形都绘制，重叠部分加色处理</li>
+<li>xor：只绘制原、新图形不重叠之处，其他做透明色</li>
+<li>copy：只绘制新图形，覆盖掉原图</li>
+</ul>
+<h3 id="实例-刮彩票"><a href="#实例-刮彩票" class="headerlink" title="实例:刮彩票"></a>实例:刮彩票</h3><ul>
+<li>注意点style.left获取的是字符串(带px),offsetLeft获取的是数值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;wrap&quot;&gt;</div><div class="line">	谢谢惠顾!</div><div class="line">	&lt;canvas&gt;&lt;/canvas&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">var wrap = document.querySelector(&quot;.wrap&quot;);</div><div class="line">	var canvas = wrap.children[0];</div><div class="line">	//设置canvas的实际宽度和高度</div><div class="line">	canvas.width = wrap.clientWidth;</div><div class="line">	canvas.height = wrap.clientHeight;</div><div class="line">	var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">	//填充画布颜色</div><div class="line">	ctx.fillStyle = &quot;#ccc&quot;;</div><div class="line">	ctx.fillRect(0,0,canvas.width,canvas.height);</div><div class="line">	canvas.onmousedown = function(e)&#123;</div><div class="line">		var disX = wrap.offsetLeft-1;//-1是减去边框</div><div class="line">		var disY = wrap.offsetTop-1;</div><div class="line">		ctx.globalCompositeOperation = &quot;destination-out&quot;;</div><div class="line">		ctx.beginPath();</div><div class="line">		document.onmousemove = function(e)&#123;</div><div class="line">			var x = e.clientX - disX;</div><div class="line">			var y = e.clientY - disY;</div><div class="line">			</div><div class="line">			// ctx.arc(x,y,5,0,Math.PI*2);</div><div class="line">			ctx.lineWidth = 10;</div><div class="line">			ctx.lineCap = &quot;round&quot;;</div><div class="line">			ctx.lineTo(x,y);</div><div class="line">			ctx.stroke();</div><div class="line">		&#125;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	document.onmouseup = function()&#123;</div><div class="line">		document.onmousemove = &quot;&quot;;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="createPattern是图片的平铺"><a href="#createPattern是图片的平铺" class="headerlink" title="createPattern是图片的平铺"></a>createPattern是图片的平铺</h2><ul>
+<li>createPattern(img,type)</li>
+<li>img：图片</li>
+<li>type：<pre><code>1) repeat整个画布平铺
+2) repeat-x在x轴方向上平铺
+3) repeat-y在y轴方向上平铺
+4) no-repeat不平铺
+</code></pre></li>
+<li>注意点:img是有onload事件<br>##.clip()剪切</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var canvas = document.querySelector(&quot;canvas&quot;);</div><div class="line">var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">var img = document.querySelector(&quot;img&quot;);</div><div class="line">ctx.rect(100,100,400,400);//画一个空心矩形</div><div class="line">ctx.clip();//剪切</div><div class="line">img.onload = function()&#123;</div><div class="line">	var c = ctx.createPattern(img,&quot;repeat&quot;);</div><div class="line">	ctx.fillStyle = c;</div><div class="line">	ctx.fillRect(0,0,800,800);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="drawImage"><a href="#drawImage" class="headerlink" title="drawImage"></a>drawImage</h2><ul>
+<li><p>绘制图像：把图片绘制在画布上面drawImage(img,x,y)</p>
+<blockquote>
+<p>1)img：图片<br>2)x：图片横坐标的起始值<br>3)y：图片纵坐标的起始值</p>
+</blockquote>
+</li>
+<li><p>绘制固定宽高的图像：drawImage(img,x,y,w,h)</p>
+<blockquote>
+<p>1)img：图片;<br>2)x：图片横坐标的起始值;<br>3)y：图片纵坐标的起始值;<br>4)w：在画布中图片显示的宽度;<br>5)h：在画布中图片显示的高度;</p>
+</blockquote>
+</li>
+<li><p>复制或放大图像局部：drawImage(img,x,y,w,h,rx,ry,rw,rh)</p>
+<blockquote>
+<p>1)img：图片<br>2)x、y：源图片的坐标<br>3)w、h：在源图片上裁剪的宽、高<br>4)rx、ry：显示在画布中的坐标<br>5)rw、rh：显示在画布中的宽、高 </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="getImageData-putImageData和DataURL必须要再服务器上跑"><a href="#getImageData-putImageData和DataURL必须要再服务器上跑" class="headerlink" title="getImageData,putImageData和DataURL必须要再服务器上跑"></a>getImageData,putImageData和DataURL必须要再服务器上跑</h2><ul>
+<li>getImageData 是对应rgba</li>
+<li>getImageData的参数有4个,putImageData的参数有3(像drawImage)</li>
+<li>.data是获取像素点数据</li>
+<li>注意点:颜色的取反 255-num 和 num 是相反颜色</li>
+<li>例如:rgb(0,0,0)–(黑色) 那么rgb(255,255,255)–(白色)</li>
+<li>把canvas里面的图片数据转成base64的地址数据格式  base64是可以加密也可以解密</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">var btn = document.querySelector(&apos;button&apos;);</div><div class="line">var canvas = document.getElementsByTagName(&apos;canvas&apos;)[0];</div><div class="line">var img = document.getElementsByTagName(&apos;img&apos;)[0];</div><div class="line">var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">img.onload = function()&#123;</div><div class="line">	//获取画板像素点数据</div><div class="line">	ctx.drawImage(img,0,0);</div><div class="line">	var imageData = ctx.getImageData(0,0,100,203);</div><div class="line">	// console.log(data);</div><div class="line">	//颜色取反 255-本来颜色=取反的颜色</div><div class="line">	//换为黑白色</div><div class="line">	for (var i = 0;i&lt;imageData.data.length; i+=4) &#123;</div><div class="line">		var c = imageData.data[i]*.3+imageData.data[i+1]*.59+imageData.data[i+2]*.11;//是黑白</div><div class="line"></div><div class="line">		imageData.data[i] = c;</div><div class="line">		imageData.data[i+1] = c;</div><div class="line">		imageData.data[i+2] = c;</div><div class="line">	&#125;</div><div class="line">	&lt;!--是获取颜色的反色</div><div class="line">	for (var i = 0;i&lt;imageData.data.length; i+=4) &#123;//为什么加4 rgba a:255</div><div class="line">		imageData.data[i] = 255-imageData.data[i];//r</div><div class="line">		imageData.data[i+1] = 255-imageData.data[i+1];//g</div><div class="line">		imageData.data[i+2] = 255-imageData.data[i+2];//b</div><div class="line">	&#125;--&gt;</div><div class="line">	</div><div class="line">	ctx.putImageData(imageData,0,0);</div><div class="line">	//把canvas里面的图片数据转成base64的地址数据格式  base64是可以加密也可以解密</div><div class="line">	var url = canvas.toDataURL(&quot;image/png&quot;);</div><div class="line">	console.log(url);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="时钟实例"><a href="#时钟实例" class="headerlink" title="时钟实例"></a>时钟实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">	canvas&#123;</div><div class="line">		border:1px solid black;</div><div class="line">	&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;canvas width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var canvas = document.querySelector(&quot;canvas&quot;);</div><div class="line">var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">ctx.translate(200,200);</div><div class="line"></div><div class="line">//画背景</div><div class="line">bg();</div><div class="line">function bg()&#123;</div><div class="line">	var deg = 0;</div><div class="line">	var r = 150;</div><div class="line">	ctx.beginPath();</div><div class="line">	for (var i = 0;i &lt; 13;i++) &#123;</div><div class="line">		// setInterval(function()&#123; //看动画效果</div><div class="line">		deg += 30;</div><div class="line">		var x = Math.sin(Math.PI/180*deg)*r;</div><div class="line">		var y = -Math.cos(Math.PI/180*deg)*r;</div><div class="line">		</div><div class="line">		ctx.lineTo(x,y);</div><div class="line">		// ctx.arc(x,y,5,0,Math.PI*2);</div><div class="line">		// ctx.stroke();</div><div class="line"></div><div class="line">		// &#125;,30);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	ctx.closePath();</div><div class="line">	//填充颜色</div><div class="line">	var c = ctx.createRadialGradient(0,0,0,0,0,150);</div><div class="line">	c.addColorStop(0,&quot;#22f&quot;);</div><div class="line">	c.addColorStop(1,&quot;#0ef&quot;);</div><div class="line">	ctx.fillStyle = c;</div><div class="line">	ctx.fill();</div><div class="line">&#125;</div><div class="line"></div><div class="line">//画刻度</div><div class="line">kedu();</div><div class="line">function kedu()&#123;</div><div class="line">	var deg = 0;</div><div class="line">	for (var i = 0;i &lt; 60;i++) &#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.rotate(Math.PI/30*i);</div><div class="line">		ctx.beginPath();</div><div class="line">		ctx.moveTo(0,-150);</div><div class="line">		if (i%5==0) &#123;</div><div class="line">			ctx.lineWidth = 5;</div><div class="line">			ctx.lineTo(0,-135);</div><div class="line">		&#125;else&#123;</div><div class="line">			ctx.lineWidth = 3;</div><div class="line">			ctx.lineTo(0,-138);</div><div class="line">		&#125;	</div><div class="line">		ctx.strokeStyle = &quot;white&quot;;</div><div class="line">		ctx.stroke();</div><div class="line">		ctx.restore();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//画数字</div><div class="line">num();</div><div class="line">function num()&#123;</div><div class="line">	for (var i = 1;i &lt; 13;i++) &#123;</div><div class="line">		// ctx.save();</div><div class="line">		// ctx.rotate(Math.PI/6*i);</div><div class="line">		var x = Math.sin(Math.PI/6*i)*120;</div><div class="line">		var y = -Math.cos(Math.PI/6*i)*120;</div><div class="line">		ctx.font = &quot;20px 黑体&quot;;</div><div class="line">		ctx.textBaseline = &quot;middle&quot;;</div><div class="line">		ctx.textAlign = &quot;center&quot;;</div><div class="line">		ctx.fillStyle = &quot;white&quot;;</div><div class="line">		ctx.fillText(i,x,y+3);</div><div class="line">		// ctx.restore();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sFn(deg)&#123;</div><div class="line">	ctx.save();</div><div class="line">	ctx.rotate(Math.PI/180*deg);</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.moveTo(0,5);</div><div class="line">	ctx.lineTo(0,-120);</div><div class="line">	ctx.strokeStyle = &quot;white&quot;;</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.closePath();</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div><div class="line"></div><div class="line">//分针</div><div class="line">// mFn(30);</div><div class="line">function mFn(deg)&#123;</div><div class="line">	ctx.save();</div><div class="line">	ctx.rotate(Math.PI/180*deg);</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.moveTo(0,5);</div><div class="line">	ctx.lineTo(0,-100);</div><div class="line">	ctx.strokeStyle = &quot;white&quot;;</div><div class="line">	ctx.lineCap = &quot;round&quot;;//让线的两边变为圆</div><div class="line">	ctx.lineWidth = 3;</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.closePath();</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div><div class="line"></div><div class="line">// hFn(60);</div><div class="line">function hFn(deg)&#123;</div><div class="line">	ctx.save();</div><div class="line">	ctx.rotate(Math.PI/180*deg);</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.moveTo(0,5);//-2.5是想让旋转更为中心点</div><div class="line">	ctx.lineTo(0,-80);</div><div class="line">	ctx.strokeStyle = &quot;white&quot;;</div><div class="line">	ctx.lineWidth = 5;</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.closePath();</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div><div class="line">//针</div><div class="line">setInterval(function()&#123;</div><div class="line">	var date = new Date();</div><div class="line">	var s = date.getSeconds();</div><div class="line">	var m = date.getMinutes();</div><div class="line">	var h = date.getHours();</div><div class="line">	ctx.clearRect(-200,-200,400,400);</div><div class="line">	bg();</div><div class="line">	kedu();</div><div class="line">	num();</div><div class="line">	</div><div class="line">	sFn(s*6);</div><div class="line">	mFn(m*6);</div><div class="line">	hFn(h*30+m*6/360*30);</div><div class="line">&#125;,1000);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Susan" />
+          <p class="site-author-name" itemprop="name">Susan</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Susan</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
