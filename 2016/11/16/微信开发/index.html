@@ -6,14 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>微信开发 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="微信开发
+打开微信公众号:https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+
+接口修改,下载wk_weixin.php
+
+获取access_token(2个小时的有效期,所以要保存下来,过期再重新获取)
+就可以获取用户基本信息
+页面授权(还要修改域名) 1 第一步：用户同意授权，获取code(每次授权获取到一个code)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信开发">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/微信开发/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="微信开发
+打开微信公众号:https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+
+接口修改,下载wk_weixin.php
+
+获取access_token(2个小时的有效期,所以要保存下来,过期再重新获取)
+就可以获取用户基本信息
+页面授权(还要修改域名) 1 第一步：用户同意授权，获取code(每次授权获取到一个code)">
+<meta property="og:updated_time" content="2017-01-11T05:19:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="微信开发">
+<meta name="twitter:description" content="微信开发
+打开微信公众号:https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
+
+接口修改,下载wk_weixin.php
+
+获取access_token(2个小时的有效期,所以要保存下来,过期再重新获取)
+就可以获取用户基本信息
+页面授权(还要修改域名) 1 第一步：用户同意授权，获取code(每次授权获取到一个code)">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +160,171 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-微信开发" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信开发
+    </h1>
+  
+
+        
+        <a href="/2016/11/16/微信开发/" class="archive-article-date">
+  	<time datetime="2016-11-16T15:04:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-16</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="微信开发"><a href="#微信开发" class="headerlink" title="微信开发"></a>微信开发</h1><ol>
+<li><p>打开微信公众号:<a href="https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login" target="_blank" rel="external">https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login</a></p>
+</li>
+<li><p>接口修改,下载wk_weixin.php</p>
+</li>
+<li>获取access_token(2个小时的有效期,所以要保存下来,过期再重新获取)</li>
+<li>就可以获取用户基本信息</li>
+<li>页面授权(还要修改域名)<br> 1 第一步：用户同意授权，获取code(每次授权获取到一个code)<br>  2 第二步：通过code换取网页授权access_token(用code获取只能用一次)<br> 3 第三步：刷新access_token（如果需要）<br> 4 第四步：拉取用户信息(需scope为 snsapi_userinfo)</li>
+</ol>
+<ul>
+<li>访问的时候,参数不要添加<br><a href="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=</a> wx6be246ea36fabbda&amp;secret= 92aa8f5547c7a9fa17a06386dd2ed271</li>
+</ul>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><ul>
+<li>数据库的创建,要先再存储与CDN服务(Storage),创建bucket(要绑定域名)</li>
+<li>数据库与缓存服务-&gt;共享型MySQL-&gt;管理(添加数据)</li>
+<li>新浪云创建数据库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">// 连主库,旧版的数据库连接</div><div class="line">$db=mysql_connect(SAE_MYSQL_HOST_M.&apos;:&apos;.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);</div><div class="line"></div><div class="line">if ($db) &#123;</div><div class="line">   // mysql_select_db(SAE_MYSQL_DB, $db);</div><div class="line"></div><div class="line">　　echo &apos;ok&apos;; // ... </div><div class="line">&#125;</div><div class="line">else&#123; echo &apos;error&apos;; &#125; </div><div class="line"></div><div class="line">//新版数据库连接</div><div class="line">//新浪云的数据库连接</div><div class="line">$conn=mysqli_connect(SAE_MYSQL_HOST_M.&apos;:&apos;.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS,SAE_MYSQL_DB);</div><div class="line">``` </div><div class="line"></div><div class="line">## 获取唯一票证access_token</div><div class="line">1. 获取信息列表,需要通过获取access_token,才能获取用户的信息列表 (公众平台开发者文档-&gt;获取接口调用凭据)</div><div class="line">2. https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET(修改appid和secret)</div><div class="line">3. 要注意有效时间(7200s),有效时间过期之后就要重新获取access_token,目前access_token的有效期通过返回的expire_in来传达</div><div class="line"></div><div class="line">## 用户管理</div><div class="line">1. 获取openid (公众平台开发者文档-&gt;获取用户基本信息(UnionID机制)) 就会输出用户的个人信息</div></pre></td></tr></table></figure>
+<p>{<br>    “subscribe”: 1,<br>    “openid”: “o6_bmjrPTlm6_2sgVt7hMZOPfL2M”,<br>    “nickname”: “Band”,<br>    “sex”: 1,<br>    “language”: “zh_CN”,<br>    “city”: “广州”,<br>    “province”: “广东”,<br>    “country”: “中国”,<br>    “headimgurl”:    “<a href="http://wx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/0" target="_blank" rel="external">http://wx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/0</a>“,<br>   “subscribe_time”: 1382694957,<br>   “unionid”: “ o6_bmasdasdsad6_2sgVt7hMZOPfL”<br>   “remark”: “”,<br>   “groupid”: 0<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2. https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN(修改access_token,获取用户列表)</div><div class="line">3. 获取用户列表(公众平台开发者文档-&gt;获取用户列表)--&gt;也就是关注我的用户信息</div></pre></td></tr></table></figure></p>
+<pre><code>{
+</code></pre><p>   “total”:23000,<br>   “count”:10000,<br>   “data”:{<br>     “openid”:[<br>       “OPENID10001”,<br>       “OPENID10002”,<br>       …,<br>       “OPENID20000”<br>     ]<br>       },<br>       “next_openid”:”OPENID20000”<br>    }<br>    ```</p>
+<h2 id="网页授权"><a href="#网页授权" class="headerlink" title="网页授权"></a>网页授权</h2><p><mark>注意点:code换取网页授权access_token,的有效时间是5分钟,要记录到数据库中,防止调失.他的更新时间较长</mark></p>
+<h2 id="微信JS-SDK"><a href="#微信JS-SDK" class="headerlink" title="微信JS-SDK"></a>微信JS-SDK</h2><ul>
+<li>微信的接口用法</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/16/微信开发/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/11/16/自适应/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          自适应布局的注意点
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/16/php_arr/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php的数组方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

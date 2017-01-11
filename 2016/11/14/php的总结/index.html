@@ -6,14 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>php的总结(需要注意的问题) | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="总结
+header(“Content-Type: text/html;charset=utf-8”); //PHP页面转UTF-8编码
+global是不可以赋值的,声明$a为全局变量
+内存溢出:指没用的东西占用内存—&amp;gt;函数的静态变量就类似闭包,会占用内存
+
+
+局部变量在函数退出时会被撤消，与局部变量不同，静态变量在函数退出时不会丢失值，并且再次调用函数时还能保留这个值;    在变量名前面加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php的总结(需要注意的问题)">
+<meta property="og:url" content="http://yoursite.com/2016/11/14/php的总结/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="总结
+header(“Content-Type: text/html;charset=utf-8”); //PHP页面转UTF-8编码
+global是不可以赋值的,声明$a为全局变量
+内存溢出:指没用的东西占用内存—&amp;gt;函数的静态变量就类似闭包,会占用内存
+
+
+局部变量在函数退出时会被撤消，与局部变量不同，静态变量在函数退出时不会丢失值，并且再次调用函数时还能保留这个值;    在变量名前面加">
+<meta property="og:updated_time" content="2017-01-11T05:30:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="php的总结(需要注意的问题)">
+<meta name="twitter:description" content="总结
+header(“Content-Type: text/html;charset=utf-8”); //PHP页面转UTF-8编码
+global是不可以赋值的,声明$a为全局变量
+内存溢出:指没用的东西占用内存—&amp;gt;函数的静态变量就类似闭包,会占用内存
+
+
+局部变量在函数退出时会被撤消，与局部变量不同，静态变量在函数退出时不会丢失值，并且再次调用函数时还能保留这个值;    在变量名前面加">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +157,158 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-php的总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php的总结(需要注意的问题)
+    </h1>
+  
+
+        
+        <a href="/2016/11/14/php的总结/" class="archive-article-date">
+  	<time datetime="2016-11-14T11:54:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>header(“Content-Type: text/html;charset=utf-8”); //PHP页面转UTF-8编码</li>
+<li>global是不可以赋值的,声明$a为全局变量</li>
+<li>内存溢出:指没用的东西占用内存—&gt;函数的静态变量就类似闭包,会占用内存</li>
+</ul>
+<blockquote>
+<p>局部变量在函数退出时会被撤消，与局部变量不同，静态变量在函数退出时不会丢失值，并且再次调用函数时还能保留这个值;<br>    在变量名前面加上 static 关键字就可以声明一个静态变量;(内存溢出:指没用的东西再占用内存)</p>
+</blockquote>
+<ul>
+<li>继承中子类继承父类 : 父类的元素中,如果是    私有元素子类不可以继承,但是protected是可以访问(是特指内部访问,子类外部是不可以访问的)</li>
+<li>类的3大特点:封装 继承 多态</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/14/php的总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/11/16/php_arr/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          php的数组方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/10/php4(实例+sql实例)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php中面向对象,增删改查的操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +331,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

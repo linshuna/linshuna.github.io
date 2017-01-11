@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>php的数组方法 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="http://www.baidu.comconsole.log(111)[baidu]http://php.net/manual/zh/features.commandline.php
+12345678910111213141516171819&amp;lt;?php// 创建一个简单的数组$array = array(1, 2, 3, 4, 5);print_r($array);// 现在删除其中的所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php的数组方法">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/php_arr/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="http://www.baidu.comconsole.log(111)[baidu]http://php.net/manual/zh/features.commandline.php
+12345678910111213141516171819&amp;lt;?php// 创建一个简单的数组$array = array(1, 2, 3, 4, 5);print_r($array);// 现在删除其中的所">
+<meta property="og:updated_time" content="2017-01-11T05:32:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="php的数组方法">
+<meta name="twitter:description" content="http://www.baidu.comconsole.log(111)[baidu]http://php.net/manual/zh/features.commandline.php
+12345678910111213141516171819&amp;lt;?php// 创建一个简单的数组$array = array(1, 2, 3, 4, 5);print_r($array);// 现在删除其中的所">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +142,196 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-php_arr" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php的数组方法
+    </h1>
+  
+
+        
+        <a href="/2016/11/16/php_arr/" class="archive-article-date">
+  	<time datetime="2016-11-16T15:04:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-16</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p><a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br><code>console.log(111)</code><br>[baidu]<a href="http://php.net/manual/zh/features.commandline.php" target="_blank" rel="external">http://php.net/manual/zh/features.commandline.php</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">// 创建一个简单的数组</div><div class="line">$array = array(1, 2, 3, 4, 5);</div><div class="line">print_r($array);</div><div class="line">// 现在删除其中的所有元素，但保持数组本身不变:</div><div class="line">foreach ($array as $i =&gt; $value) &#123;</div><div class="line">    unset($array[$i]);</div><div class="line">&#125;</div><div class="line">print_r($array);</div><div class="line"></div><div class="line">// 添加一个单元（注意新的键名是 5，而不是你可能以为的 0）</div><div class="line">$array[] = 6;</div><div class="line">print_r($array);</div><div class="line"></div><div class="line">// 重新索引：</div><div class="line">$array = array_values($array);</div><div class="line">$array[] = 7;</div><div class="line">print_r($array);</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">Array</div><div class="line">(</div><div class="line">    [0] =&gt; 1</div><div class="line">    [1] =&gt; 2</div><div class="line">    [2] =&gt; 3</div><div class="line">    [3] =&gt; 4</div><div class="line">    [4] =&gt; 5</div><div class="line">)</div><div class="line">Array</div><div class="line">(</div><div class="line">)</div><div class="line">Array</div><div class="line">(</div><div class="line">    [5] =&gt; 6</div><div class="line">)</div><div class="line">Array</div><div class="line">(</div><div class="line">    [0] =&gt; 6</div><div class="line">    [1] =&gt; 7</div><div class="line">)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>php的boolean是不区分大小写</li>
+<li>特殊:</li>
+</ul>
+<blockquote>
+<p>$var1 = TRUE;<br>  $var2 = FALSE;<br>  echo $var1;//输出1<br>  echo $var2;//不输出</p>
+</blockquote>
+<ul>
+<li>in_array() 函数搜索数组中是否存在指定的值</li>
+<li>array_search() 在数组中搜索键值 5，并返回它的键名（注意 “”） </li>
+<li>array_change_key_case($name,CASE_UPPER/CASE_LOWER)</li>
+</ul>
+<ol>
+<li>CASE_LOWER - 默认值。将数组的键转换为小写字母。</li>
+<li>CASE_UPPER - 将数组的键转换为大写字母。</li>
+</ol>
+<ul>
+<li>array_chunk(array,size,true/false) 函数把数组分割为新的数组块。</li>
+</ul>
+<blockquote>
+<p>前两个参数是必须的,size:必需。整数值，规定每个新数组包含多少个元素。</p>
+<blockquote>
+<p>第三个参数:true - 保留原始数组中的键名。false - 默认。每个结果数组使用从零开始的新数组索引。</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>array_column() 返回输入数组中某个单一列的值。</li>
+<li>array_combine(keys,values);函数通过合并两个数组来创建一个新数组，其中的一个数组是键名，另一个数组的值为键值。</li>
+<li>array_count_values(array)  函数用于统计数组中所有值出现的次数。</li>
+</ul>
+<h2 id="数组升降"><a href="#数组升降" class="headerlink" title="数组升降"></a>数组升降</h2><ul>
+<li>sort() - 以升序对数组排</li>
+<li>rsort() - 以降序对数组排序</li>
+<li>asort() - 根据值，以升序对关联数组进行排序</li>
+<li>ksort() - 根据键，以升序对关联数组进行排序</li>
+<li>arsort() - 根据值，以降序对关联数组进行排序</li>
+<li>krsort() - 根据键，以降序对关联数组进行排序</li>
+</ul>
+<h2 id="表单提交"><a href="#表单提交" class="headerlink" title="表单提交"></a>表单提交</h2><ul>
+<li>input的类型radio的name是要一致的,如”gender”,性别的单选择,通过name和value</li>
+</ul>
+<h2 id="函数PHP函数之可变函数"><a href="#函数PHP函数之可变函数" class="headerlink" title="函数PHP函数之可变函数"></a>函数PHP函数之可变函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class book &#123;  </div><div class="line">       function getName() &#123;  </div><div class="line">           return &apos;bookname&apos;;  </div><div class="line">       &#125;  </div><div class="line">   &#125;  </div><div class="line">   $func = &apos;getName&apos;;  </div><div class="line">   $book = new book();  </div><div class="line">   echo $book-&gt;$func();</div></pre></td></tr></table></figure>
+<p><mark>private的数据类型调用</mark></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php  </div><div class="line">    class Car &#123;  </div><div class="line">        private $name = &apos;汽车&apos;;  </div><div class="line">        public function getName() &#123;  </div><div class="line">            return $this-&gt;name;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    $car= new Car();    //new一个新的类  </div><div class="line">    echo $car-&gt;getName();  </div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<h2 id="单引号是不能访问变量"><a href="#单引号是不能访问变量" class="headerlink" title="单引号是不能访问变量"></a>单引号是不能访问变量</h2>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/16/php_arr/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/11/16/微信开发/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          微信开发
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/14/php的总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php的总结(需要注意的问题)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +354,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

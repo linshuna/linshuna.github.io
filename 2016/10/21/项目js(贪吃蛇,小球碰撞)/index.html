@@ -6,14 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>贪吃蛇等小项目的总结 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="小项目小球的碰撞（中间是有障碍物）
+
+如果小球是用p标签写的效果和div写小球的不一样（原因是p标签有默认的margin值，会影响效果）
+
+解决方案是将p默认的margin值改为0 *{margin:0;padding:0;}
+
+
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪吃蛇等小项目的总结">
+<meta property="og:url" content="http://yoursite.com/2016/10/21/项目js(贪吃蛇,小球碰撞)/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="小项目小球的碰撞（中间是有障碍物）
+
+如果小球是用p标签写的效果和div写小球的不一样（原因是p标签有默认的margin值，会影响效果）
+
+解决方案是将p默认的margin值改为0 *{margin:0;padding:0;}
+
+
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
+<meta property="og:updated_time" content="2017-01-11T05:22:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="贪吃蛇等小项目的总结">
+<meta name="twitter:description" content="小项目小球的碰撞（中间是有障碍物）
+
+如果小球是用p标签写的效果和div写小球的不一样（原因是p标签有默认的margin值，会影响效果）
+
+解决方案是将p默认的margin值改为0 *{margin:0;padding:0;}
+
+
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +163,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-项目js(贪吃蛇,小球碰撞)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      贪吃蛇等小项目的总结
+    </h1>
+  
+
+        
+        <a href="/2016/10/21/项目js(贪吃蛇,小球碰撞)/" class="archive-article-date">
+  	<time datetime="2016-10-21T03:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-21</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="小项目"><a href="#小项目" class="headerlink" title="小项目"></a>小项目</h1><h3 id="小球的碰撞（中间是有障碍物）"><a href="#小球的碰撞（中间是有障碍物）" class="headerlink" title="小球的碰撞（中间是有障碍物）"></a>小球的碰撞（中间是有障碍物）</h3><blockquote>
+<blockquote>
+<p>如果小球是用p标签写的效果和div写小球的不一样（原因是p标签有默认的margin值，会影响效果）</p>
+<blockquote>
+<p>解决方案是将p默认的margin值改为0 *{margin:0;padding:0;}</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">//获取元素</div><div class="line">//var wrap = document.getElementById(&quot;wrap&quot;);//</div><div class="line">var div = wrap.children[0];</div><div class="line">var p = wrap.children[1];</div><div class="line">var vx = 5;//速度</div><div class="line">var vy = 5;</div><div class="line">var x = 0;//改变方向</div><div class="line">var y = 0;</div><div class="line"></div><div class="line">var timer = setInterval(function()&#123;</div><div class="line">	x+=vx;</div><div class="line">	y+=vy;</div><div class="line">	//获取8个值</div><div class="line">	var l1 = x;</div><div class="line">	var r1 = x+div.offsetWidth;</div><div class="line">	var t1 = y;</div><div class="line">	var b1 = y+div.offsetHeight;</div><div class="line"></div><div class="line">	var l2 = p.offsetLeft;</div><div class="line">	var r2 = l2+p.offsetWidth;</div><div class="line">	var t2 = p.offsetTop;</div><div class="line">	var b2 = t2+p.offsetHeight;</div><div class="line">	//第三步,比较8个边的碰撞</div><div class="line">	if (l1&lt;=r2 &amp;&amp; r1&gt;=l2 &amp;&amp; t1&lt;=b2  &amp;&amp; b1&gt;=t2) &#123;//判断已经撞到边</div><div class="line">		//div右边碰撞p的左边</div><div class="line">		if (r1-l2&lt;Math.abs(vx) &amp;&amp; vx&gt;0) &#123;</div><div class="line">			vx*=-1;</div><div class="line">			x = l2-div.offsetWidth;//强制转换(会碰到一点点)</div><div class="line">		&#125;</div><div class="line">		//div左边碰撞p的右边</div><div class="line">		if (r2-l1&lt;Math.abs(vx) &amp;&amp; vx &lt; 0) &#123;</div><div class="line">			vx*=-1;</div><div class="line">			x = r2;</div><div class="line">		&#125;</div><div class="line">		//div的上边碰撞p的下边</div><div class="line">		if (b2-t1&lt;Math.abs(vy) &amp;&amp; vy&lt;0)&#123;</div><div class="line">			vy*=-1;</div><div class="line">			y = b2;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">		//div的下边碰撞p的上边</div><div class="line">		if (b1-t2&lt;Math.abs(vy) &amp;&amp;vy&gt;0)&#123;</div><div class="line">			vy*=-1;</div><div class="line">			y = t2-div.offsetHeight;</div><div class="line">		&#125;</div><div class="line">	&#125; </div><div class="line">	//第一步</div><div class="line">	if (x&lt;0 || x&gt;wrap.clientWidth-div.offsetWidth) &#123;</div><div class="line">		//会出现一点点的超出,下面是解决问题(强制转换) 碰到一点点边边</div><div class="line">		if (vx&gt;0) &#123;//vx速度是正数</div><div class="line">			x = wrap.clientWidth-div.offsetWidth;</div><div class="line">		&#125;else if (vx&lt;0) &#123;//vx速度是负数</div><div class="line">			x = 0;</div><div class="line">		&#125;</div><div class="line">		vx *= -1;</div><div class="line">	&#125;</div><div class="line">	//第二步</div><div class="line">	if (y&lt;0 || y&gt;wrap.clientHeight-div.offsetHeight) &#123;</div><div class="line">		if (vy&gt;0) &#123;</div><div class="line">			y = wrap.clientHeight-div.offsetHeight;</div><div class="line">		&#125;else if (vy&lt;0) &#123;</div><div class="line">			y = 0;</div><div class="line">		&#125;</div><div class="line">		vy *= -1;</div><div class="line">	&#125;</div><div class="line">	//判断4个边</div><div class="line"></div><div class="line">	div.style.left = x+&quot;px&quot;;</div><div class="line">	div.style.top = y+&quot;px&quot;;</div><div class="line">&#125;,30);</div></pre></td></tr></table></figure>
+<h3 id="放大镜"><a href="#放大镜" class="headerlink" title="放大镜"></a>放大镜</h3><blockquote>
+<p>注意点：如果max是用overflow:scroll;obj.scrollTop和obj.scrollLeft是没有单位的 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">//获取小图框和小图</div><div class="line">var min = document.querySelector(&quot;.min&quot;);</div><div class="line">var minImg = document.querySelector(&quot;.min img&quot;);</div><div class="line">//获取小方块</div><div class="line">var p = document.querySelector(&apos;p&apos;);</div><div class="line">//获取大图框 和大图</div><div class="line">var max = document.querySelector(&quot;.max&quot;);</div><div class="line">var maxImg = document.querySelector(&quot;.max img&quot;);</div><div class="line"></div><div class="line"></div><div class="line">//第二步</div><div class="line">min.onmouseenter = function()&#123;</div><div class="line">	p.style.display = &quot;block&quot;;</div><div class="line">	max.style.display = &quot;block&quot;;</div><div class="line">&#125;</div><div class="line">min.onmouseleave = function()&#123;</div><div class="line">	p.style.display = &quot;none&quot;;</div><div class="line">	max.style.display = &quot;none&quot;;</div><div class="line">&#125;</div><div class="line">//第一步</div><div class="line">//鼠标移进小框</div><div class="line">min.onmousemove = function(e)&#123;</div><div class="line">	//再小方块的正中心移动</div><div class="line">	var x = e.clientX-p.offsetWidth/2;</div><div class="line">	var y = e.clientY-p.offsetHeight/2;</div><div class="line">	if (x&lt;0) &#123;</div><div class="line">		x = 0;</div><div class="line">	&#125;else if (x&gt;min.clientWidth-p.offsetWidth) &#123;</div><div class="line">		x = min.clientWidth-p.offsetWidth;</div><div class="line">	&#125;</div><div class="line">	if (y&lt;0) &#123;</div><div class="line">		y = 0;</div><div class="line">	&#125;else if ( y &gt;min.clientHeight-p.offsetHeight) &#123;</div><div class="line">		y = min.clientHeight-p.offsetHeight;</div><div class="line">	&#125;</div><div class="line">	p.style.left = x+&quot;px&quot;;</div><div class="line">	p.style.top = y+&quot;px&quot;;</div><div class="line">	//第三步</div><div class="line">	//大图也跟着移动</div><div class="line">	var scale = min.clientWidth/p.offsetWidth;//比例是大框和小方块</div><div class="line">	maxImg.style.width = scale*minImg.offsetWidth+&quot;px&quot;;//设置大框的宽度,上面的样式就可以不用另外算</div><div class="line">	/*maxImg.style.left = -x*scale+&quot;px&quot;;</div><div class="line">	maxImg.style.top = -y*scale + &quot;px&quot;;*/</div><div class="line">	//97 98行的另一种写法(scroll是没有单位的)</div><div class="line">	max.scrollLeft = x*scale;</div><div class="line">	max.scrollTop = y*scale;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="小方块的拖动事件"><a href="#小方块的拖动事件" class="headerlink" title="小方块的拖动事件"></a>小方块的拖动事件</h3><blockquote>
+<p>注意点：window的滚轮事件，有卷起的那部分，要加上来<br>div.style.left一定要加单位，div块也一定要是定位</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">var div = document.getElementsByTagName(&apos;div&apos;)[0];</div><div class="line">var winW = window.innerWidth;//屏幕宽</div><div class="line">var winH = window.innerHeight;//屏幕高</div><div class="line">div.onmousedown = function (e) &#123;</div><div class="line">	var dx = e.clientX - div.offsetLeft;</div><div class="line">	var dy = e.clientY - div.offsetTop;</div><div class="line">	// 获取滚动条位置</div><div class="line">	var sTop = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line">	var sLeft= document.documentElement.scrollLeft || document.body.scrollLeft;</div><div class="line">	document.onmousemove = function(e)&#123;</div><div class="line">		var x = e.clientX - dx;</div><div class="line">		var y = e.clientY - dy;</div><div class="line">		if (x&lt;sLeft) &#123;</div><div class="line">			x = sLeft;</div><div class="line">		&#125;else if(x&gt;winW-div.offsetWidth+sLeft)&#123;</div><div class="line">			x = winW-div.offsetWidth+sLeft;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		if(y&lt;sTop)&#123;</div><div class="line">			y = sTop;</div><div class="line">		&#125;else if(y&gt;winH-div.offsetHeight+sTop)&#123;</div><div class="line">			y = winH-div.offsetHeight+sTop;</div><div class="line">		&#125;</div><div class="line">		div.style.left = x + &quot;px&quot;;</div><div class="line">		div.style.top = y + &quot;px&quot;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">document.onmouseup = function()&#123;</div><div class="line">	document.onmousemove = &quot;&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">window.onscroll = function()&#123;</div><div class="line">	// 获取滚动条位置</div><div class="line">	var sTop = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line">	var sLeft= document.documentElement.scrollLeft || document.body.scrollLeft;</div><div class="line"></div><div class="line">	if (sTop&gt;div.offsetTop) &#123;</div><div class="line">		div.style.top = sTop + &quot;px&quot;;</div><div class="line">	&#125;else if(div.offsetTop&gt;sTop+winH-div.offsetHeight)&#123;</div><div class="line">		div.style.top = sTop+winH-div.offsetHeight + &quot;px&quot;;</div><div class="line">	&#125;</div><div class="line">	console.log(div.offsetTop,sTop+winH-div.offsetHeight)</div><div class="line">	if (sLeft&gt;div.offsetLeft) &#123;</div><div class="line">		div.style.left = sLeft + &quot;px&quot;;</div><div class="line">	&#125;else if(div.offsetLeft&gt;sLeft+winW-div.offsetWidth)&#123;</div><div class="line">		div.style.left = sLeft+winW-div.offsetWidth + &quot;px&quot;;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="贪吃蛇"><a href="#贪吃蛇" class="headerlink" title="贪吃蛇"></a>贪吃蛇</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=&quot;wrap&quot;&gt;</div><div class="line">		&lt;div id=&quot;snake&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;div&gt;&lt;/div&gt;</div><div class="line">		&lt;div&gt;&lt;/div&gt;</div><div class="line">		&lt;p&gt;&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var wrap = document.querySelector(&quot;#wrap&quot;);</div><div class="line">var p = document.querySelector(&quot;p&quot;)</div><div class="line">var div = wrap.getElementsByTagName(&apos;div&apos;);</div><div class="line">var x = 0;</div><div class="line">var y = 0;</div><div class="line">var speed = 20;</div><div class="line">var vx = speed;</div><div class="line">var vy = 0;</div><div class="line">var bol = false;//用来判断是否按了方向键</div><div class="line">changeFood()</div><div class="line">var timer = setInterval(function () &#123;</div><div class="line">	x += vx;</div><div class="line">	y += vy;</div><div class="line">	// 判断撞墙</div><div class="line">	if (x&lt;0) &#123;</div><div class="line">		x = wrap.clientWidth-20;</div><div class="line">		// gameover()</div><div class="line">	&#125;else if(x&gt;wrap.clientWidth-20)&#123;</div><div class="line">		x = 0;</div><div class="line">	&#125;</div><div class="line">	if (y&lt;0) &#123;</div><div class="line">		y = wrap.clientHeight-20;</div><div class="line">	&#125;else if(y&gt;wrap.clientHeight-20)&#123;</div><div class="line">		y = 0;</div><div class="line">	&#125;</div><div class="line">	//移动蛇身体</div><div class="line">	for (var i = div.length - 1; i &gt; 0; i--) &#123;</div><div class="line">		div[i].style.left = div[i-1].offsetLeft + &quot;px&quot;;</div><div class="line">		div[i].style.top = div[i-1].offsetTop + &quot;px&quot;;</div><div class="line">	&#125;</div><div class="line">	// div[2].style.left = div[1].offsetLeft + &quot;px&quot;;</div><div class="line">	// div[2].style.top = div[1].offsetTop + &quot;px&quot;;</div><div class="line"></div><div class="line">	// div[1].style.left = div[0].offsetLeft + &quot;px&quot;;</div><div class="line">	// div[1].style.top = div[0].offsetTop + &quot;px&quot;;</div><div class="line">	div[0].style.left = x + &quot;px&quot;;</div><div class="line">	div[0].style.top = y + &quot;px&quot;;</div><div class="line">	check()</div><div class="line">	bol = false;</div><div class="line">&#125;,200)</div><div class="line">//创建蛇的身体</div><div class="line">function createBody()&#123;</div><div class="line">	var div = document.createElement(&quot;div&quot;);</div><div class="line">	wrap.appendChild(div);</div><div class="line">&#125;</div><div class="line">//改变食物的位置</div><div class="line">function changeFood()&#123;</div><div class="line">	// 计算一行的格子数量</div><div class="line">	var numx = parseInt(wrap.clientWidth/20)</div><div class="line">	var numy = parseInt(wrap.clientHeight/20)</div><div class="line">	//随机食物位置</div><div class="line">	var rndx = Math.floor(Math.random()*numx)*20;</div><div class="line">	var rndy = Math.floor(Math.random()*numy)*20;</div><div class="line"></div><div class="line">	for (var i = 0; i &lt; div.length; i++) &#123;</div><div class="line">		if (rndx==div[i].offsetLeft&amp;&amp;rndy==div[i].offsetTop) &#123;</div><div class="line">			// 判断如果食物位置如果在蛇身上重新调用改变食物的位置函数</div><div class="line">			return changeFood();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	p.style.left = rndx + &quot;px&quot;;</div><div class="line">	p.style.top = rndy + &quot;px&quot;;</div><div class="line">&#125;</div><div class="line">//吃到食物或者吃到自己</div><div class="line">function check()&#123;</div><div class="line">	if (x==p.offsetLeft&amp;&amp;y==p.offsetTop) &#123;</div><div class="line">		changeFood()</div><div class="line">		createBody()</div><div class="line">	&#125;</div><div class="line">	for (var i = 4; i &lt; div.length; i++) &#123;</div><div class="line">		if (x==div[i].offsetLeft&amp;&amp;y==div[i].offsetTop) &#123;</div><div class="line">			gameover();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">function gameover()&#123;</div><div class="line">	clearInterval(timer);</div><div class="line">	alert(&quot;游戏结束&quot;)</div><div class="line">&#125;</div><div class="line">document.onclick = function()&#123;</div><div class="line">	changeFood()</div><div class="line">	createBody()</div><div class="line">&#125;</div><div class="line"></div><div class="line">document.onkeydown = function(e)&#123;</div><div class="line">	switch(e.keyCode)&#123;</div><div class="line">		case 37://左</div><div class="line">			if(vx==0&amp;&amp;!bol)&#123;vx = -speed;vy = 0;&#125;</div><div class="line">		break;</div><div class="line">		case 38://上</div><div class="line">			if(vy==0&amp;&amp;!bol)&#123;vx = 0;vy = -speed;&#125;</div><div class="line">		break;</div><div class="line">		case 39://右</div><div class="line">			if(vx==0&amp;&amp;!bol)&#123;vx = speed;vy = 0;&#125;</div><div class="line">		break;</div><div class="line">		case 40://下</div><div class="line">			if(vy==0&amp;&amp;!bol)&#123;vx = 0;vy = speed;&#125;</div><div class="line">		break;</div><div class="line">	&#125;</div><div class="line">	bol = true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/10/21/项目js(贪吃蛇,小球碰撞)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/10/21/MAC下SVN的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MAC下SVN的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/19/jq封装插件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">封装jq插件</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +342,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

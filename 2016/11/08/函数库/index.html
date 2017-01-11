@@ -6,14 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>函数库 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="函数概念函数可以使程序更具模块化,拥有良好的结构;
+函数分为内置函数和自定义函数
+函数名不区分大小写,不过在调用函数的时候，通常使用其在定义时相同的形式;
+php不支持函数重载, 所以自定义函数不能和内置函数重名;
+传递参数
+值传递(传值): 函数内对参数值的改变不会影响函数外部的值;
+引用传递(传址): 有些情况下，可能希望在函数体内对参数的修改在函数体外也能反映; 使用引用传递参数要在参数前加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数库">
+<meta property="og:url" content="http://yoursite.com/2016/11/08/函数库/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="函数概念函数可以使程序更具模块化,拥有良好的结构;
+函数分为内置函数和自定义函数
+函数名不区分大小写,不过在调用函数的时候，通常使用其在定义时相同的形式;
+php不支持函数重载, 所以自定义函数不能和内置函数重名;
+传递参数
+值传递(传值): 函数内对参数值的改变不会影响函数外部的值;
+引用传递(传址): 有些情况下，可能希望在函数体内对参数的修改在函数体外也能反映; 使用引用传递参数要在参数前加">
+<meta property="og:updated_time" content="2017-01-11T05:17:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="函数库">
+<meta name="twitter:description" content="函数概念函数可以使程序更具模块化,拥有良好的结构;
+函数分为内置函数和自定义函数
+函数名不区分大小写,不过在调用函数的时候，通常使用其在定义时相同的形式;
+php不支持函数重载, 所以自定义函数不能和内置函数重名;
+传递参数
+值传递(传值): 函数内对参数值的改变不会影响函数外部的值;
+引用传递(传址): 有些情况下，可能希望在函数体内对参数的修改在函数体外也能反映; 使用引用传递参数要在参数前加">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +157,315 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-函数库" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      函数库
+    </h1>
+  
+
+        
+        <a href="/2016/11/08/函数库/" class="archive-article-date">
+  	<time datetime="2016-11-08T09:30:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-08</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="函数概念"><a href="#函数概念" class="headerlink" title="函数概念"></a>函数概念</h1><h3 id="函数可以使程序更具模块化-拥有良好的结构"><a href="#函数可以使程序更具模块化-拥有良好的结构" class="headerlink" title="函数可以使程序更具模块化,拥有良好的结构;"></a>函数可以使程序更具模块化,拥有良好的结构;</h3><ul>
+<li>函数分为内置函数和自定义函数</li>
+<li>函数名不区分大小写,不过在调用函数的时候，通常使用其在定义时相同的形式;</li>
+<li>php不支持函数重载, 所以自定义函数不能和内置函数重名;</li>
+<li>传递参数<ol>
+<li>值传递(传值):<br> 函数内对参数值的改变不会影响函数外部的值;</li>
+<li>引用传递(传址):<br> 有些情况下，可能希望在函数体内对参数的修改在函数体外也能反映;<br> 使用引用传递参数要在参数前加上&amp;符号;<br> 变量本身传入，传入后的变量与原变量建立联系;<br> 函数体内变量的变化，会影响到原变量本身;</li>
+<li>默认参数值:<br> 可以为参数指定默认值，在没有提供其他值的情况下，则将默认值自动赋</li>
+</ol>
+</li>
+</ul>
+<h1 id="变量分为-全局变量，局部变量，静态变量"><a href="#变量分为-全局变量，局部变量，静态变量" class="headerlink" title="变量分为:全局变量，局部变量，静态变量"></a>变量分为:全局变量，局部变量，静态变量</h1><h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><ul>
+<li>函数体内定义的变量为局部变量，只在函数体内可见;</li>
+<li>局部变量的作用域：从声明它的那条语句开始到函数结束;</li>
+</ul>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><ul>
+<li>函数体外定义的变量为全局变量，与局部变量相反，全局变量可以在程序的任何地方访问;</li>
+<li>如果在函数体中需要使用全局变量，使用 global 关键字访问;</li>
+<li>全局变量的作用域：从声明它的那条语句开始到文件末尾;</li>
+</ul>
+<h3 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h3><ul>
+<li>局部变量在函数退出时会被撤消，与局部变量不同，静态变量在函数退出时不会丢失值，并且再次调用函数时还能保留这个值;</li>
+<li>在变量名前面加上 static 关键字就可以声明一个静态变量;(内存溢出:指没用的东西再占用内存)</li>
+</ul>
+<h1 id="函数库"><a href="#函数库" class="headerlink" title="函数库"></a>函数库</h1><blockquote>
+<p>通常将常用的函数组织到函数库中，可以在以后类似的应用程序中重复使用。</p>
+</blockquote>
+<ul>
+<li>include() </li>
+<li>request()</li>
+<li>include_once()</li>
+<li>require_once()</li>
+</ul>
+<blockquote>
+<p>需要调用时使用include()或require()将函数库包含到脚本中; </p>
+<blockquote>
+<p>include_once()/require_once()<br>的作用与include()/require()相同，不过它会首先验证是否已经包含了该文件，如果已经包含，则不再执行(只引用一次)</p>
+<blockquote>
+<p>如果require()包含文件出错时，脚本将停止执行。 而使用include()脚本将继续执行。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="打开和关闭文件"><a href="#打开和关闭文件" class="headerlink" title="打开和关闭文件"></a>打开和关闭文件</h1><ol>
+<li><p>fopen()</p>
+<blockquote>
+<p>函数将resource绑定到一个流或句柄。绑定之后，脚本就可以通过句柄与此资源交互;</p>
+<ol>
+<li>例1:以只读方式打开一个位于本地服务器的文本文件<br><code>$fh = fopen(&quot;test.txt&quot;, &quot;r&quot;);</code></li>
+<li>例2：以只读方式打开一个远程文件<br><code>$fh = fopen(&quot;http://www.baidu.com&quot;, &quot;r&quot;);</code></li>
+</ol>
+</blockquote>
+</li>
+<li><p>fclose(handle)</p>
+<blockquote>
+<p>将 handle 指向的文件关闭 。如果成功则返回 TRUE，失败则返回 FALSE;<br>虽然每个请求最后都会自动关闭文件，但明确的关闭打开的所有文件是一个好的习惯;</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h1><blockquote>
+<p>php 提供了很多从文件中读取数据的方法，不仅可以一次只读取一个字符，还可以一次读取整个文件。</p>
+</blockquote>
+<ol>
+<li><p>fread(handle,length)函数从handle指定的资源中读取length个字符,当到达EOF或读取到length个字符时读取将停止。如果要读取整个文件，使用filesize(handle)函数确定应该读取的字符数;</p>
+</li>
+<li><p>fgets(handle)函数从handle指定的资源中读取一行字符。</p>
+<pre><code>feof() 函数检测是否已到达文件末尾 (eof)。
+</code></pre></li>
+<li><p>file(url)函数将文件读取到数组中，各元素由换行符分隔。</p>
+</li>
+<li><p>file_get_contents(url)函数将文件内容读到字符串中;</p>
+</li>
+</ol>
+<h1 id="写入文件"><a href="#写入文件" class="headerlink" title="写入文件"></a>写入文件</h1><ol>
+<li>fwrite(handle)==&gt;函数将string的内容写入到由handle指定的资源中。如果指定length参数，将在写入Length个字符时停止。</li>
+<li>file_put_contents(url,str)==&gt;<br>函数将一个字符串写入文件，与依次调用fopen(),fwrite(),fclose()功能一样;</li>
+</ol>
+<h1 id="解析目录路径的函数"><a href="#解析目录路径的函数" class="headerlink" title="解析目录路径的函数"></a>解析目录路径的函数</h1><ol>
+<li>basename(path,suffix)==&gt;<pre><code>返回路径中的文件名部份，当指定了可选参数suffix会将这部分内容去掉;
+</code></pre></li>
+<li>dirname(path)==&gt;<pre><code>返回路径中的目录部份;
+</code></pre></li>
+<li>pathinfo()==&gt;<pre><code>返回一个关联数组，其中包括路径中的三个部份：目录名，文件名，扩展名
+</code></pre></li>
+<li>获取当前文件路径==&gt;<br> $_SERVER[“SCRIPT_FILENAME”]</li>
+</ol>
+<h1 id="其它文件操作函数"><a href="#其它文件操作函数" class="headerlink" title="其它文件操作函数"></a>其它文件操作函数</h1><ol>
+<li><p>filesize(handle)==&gt;<br> 取得文件的大小，以字节为单位</p>
+</li>
+<li><p>filectime(url)==&gt;<br> 取得文件的创建时间，以unix时间戳方式返回</p>
+</li>
+<li><p>fileatime(url)==&gt; 返回文件的最后改变时间;</p>
+</li>
+<li><p>filemtime(url)==&gt; 返回文件的最后修改时间;<br> 注：”最后改变时间”不同于 “最后修改时间”。最后改变时间指的是对文件inode数<br> 据的任何改变，包括改变权限，所属组，拥有者等; 而最后修改时间指的是对文<br> 件内容的修改</p>
+</li>
+<li><p>file_exists(url)==&gt; 检查文件或目录是否存在，如果存在返回true, 否则返回false;</p>
+</li>
+<li><p>is_readable(url)==&gt; 判断文件是否可读，如果文件存在并且可读，则返回true;</p>
+</li>
+<li><p>is_writable(url)==&gt; 判断文件是否可写，如果文件存在并且可写，则返回true;</p>
+</li>
+<li><p>date_default_timezone_set(“Asia/Shanghai”);时区设置date(“Y-m-d H:i:s”,time)时间格式</p>
+</li>
+</ol>
+<h1 id="读取目录"><a href="#读取目录" class="headerlink" title="读取目录"></a>读取目录</h1><ol>
+<li><p>opendir()<br>打开目录句柄;</p>
+</li>
+<li><p>closedir()<br>关闭目录句柄</p>
+</li>
+<li><p>readdir()<br>返回由dir_handle指定目录中的各个元素。可以使用此函数列出给定目录中的所<br>有文件和子目录</p>
+</li>
+<li><p>scandir(directory)<br>返回一个包含有 directory 指定路径中的文件和目录的数组;失败返回false;</p>
+</li>
+<li><p>rmdir(pathname)<br>删除目录 注意：目录必须为空，否则报错；</p>
+</li>
+<li><p>mkdir(pathname)<br>尝试新建一个由 pathname 指定的目录。</p>
+</li>
+</ol>
+<h1 id="复制，移动，删除文件"><a href="#复制，移动，删除文件" class="headerlink" title="复制，移动，删除文件"></a>复制，移动，删除文件</h1><ol>
+<li>copy(source,dest)<pre><code>将文件从 source 拷贝到 dest。如果成功则返回 TRUE，失败则返回 FALSE
+</code></pre></li>
+<li>rename(oldname,newname)<pre><code>尝试把 oldname 重命名为 newname。 
+如果成功则返回 TRUE，失败则返回FALSE。
+重命名是改变路径相当于移动    
+</code></pre></li>
+<li>unlink()<pre><code>删除文件，如果删除成功返回true, 否则返回false;
+</code></pre></li>
+</ol>
+<h1 id="GET与POST"><a href="#GET与POST" class="headerlink" title="GET与POST"></a>GET与POST</h1><ol>
+<li><p>GET==&gt;</p>
+<pre><code>所有表单输入的数据被加载到请求的URL地址后面;
+</code></pre><p> GET方式提交数据只能传递文本，能够提交的数据量大小有限，安全性差;</p>
+</li>
+<li><p>POST==&gt;</p>
+<pre><code>POST提交数据的方式把表单的数据打包放入http请求中; 
+</code></pre><p> POST能够提交更多的数据;</p>
+</li>
+<li>处理多值表单控件<br>多值表单控件（如复选框和多选框），大大提高了基于web的数据收集能力;<br> 因为这些组件是多值的，所以表单处理函数必须能够识别一个表单变量中可能有<br> 多个值;为了让php识别一个表单变量的多个值（即考虑为数组），需要对表单名<br> (元素的name属性值）增加一对中括号，如:<br> <input type="checkbox" name="love[]">    <h2 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h2></li>
+</ol>
+<p>表单提交的数据会自动封装为数组;</p>
+<p>用$_GET, $_POST, 或$_REQUEST获得表单提交的数据;</p>
+<p>$_REQUEST可以获取以POST方法和GET方法提交的数据，但是速度比较慢 </p>
+<pre><code>//静态界面
+&lt;a href=&quot;10.GET_POST.php?type=add&amp;dir=kkk&quot;&gt;创建文件&lt;/a&gt;
+&lt;a href=&quot;10.GET_POST.php?type=remove&amp;dir=kkk&quot;&gt;删除文件&lt;/a&gt;
+&lt;!-- action=&quot;http://www.baidu.com/s&quot;  --&gt;
+&lt;form action=&quot;10.GET_POST.php&quot; method=&quot;get&quot;&gt;
+    name:&lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+    pwd:&lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;check[0]&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;check[1]&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;check[2]&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;check[3]&quot;&gt;
+    &lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+//后台代码
+$type = $_GET[&quot;type&quot;];
+$dir = $_GET[&quot;dir&quot;];
+if ($type==&quot;add&quot;) {
+    mkdir($dir);
+    echo &quot;创建成功&quot;;
+}else if ($type ==&quot;remove&quot;) {
+    rmdir($dir);
+    echo &quot;删除成功&quot;;
+}
+echo &apos;&lt;script type=&quot;text/javascript&quot;&gt;
+        setTimeout(function(){
+            location.href = &quot;baidu.html&quot;;
+        },3000);
+&lt;/script&gt;&apos;;
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/08/函数库/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/11/09/php3(sql:array:string方法)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          php上传文件,数组的一些方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/07/php1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php中基本属性的总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +488,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,14 +6,57 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>面向对象的模式,继承,构造函数,深拷贝和浅拷贝的知识点 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="面向对象js
+对象：属性和方法的集合
+属性：其实就是变量（只不过有个归属）
+方法：其实就是函数（只不过有个归属）
+类：一组同样属性和方法的对象的集合(构造函数)
+
+模式
+工厂模式
+
+
+工厂模式是软件工程领域一种广为人知的设计模式，而由于在ECMAScript中无法创建类，因此用函数封装以特定接口创建对象。其实现方法非常简单，也就是在函数内创建一个对象，给对象赋予属性及方法再将对象返回即可。
+
+
+构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象的模式,继承,构造函数,深拷贝和浅拷贝的知识点">
+<meta property="og:url" content="http://yoursite.com/2016/10/29/Day37面向对象1/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="面向对象js
+对象：属性和方法的集合
+属性：其实就是变量（只不过有个归属）
+方法：其实就是函数（只不过有个归属）
+类：一组同样属性和方法的对象的集合(构造函数)
+
+模式
+工厂模式
+
+
+工厂模式是软件工程领域一种广为人知的设计模式，而由于在ECMAScript中无法创建类，因此用函数封装以特定接口创建对象。其实现方法非常简单，也就是在函数内创建一个对象，给对象赋予属性及方法再将对象返回即可。
+
+
+构">
+<meta property="og:updated_time" content="2017-01-11T05:24:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="面向对象的模式,继承,构造函数,深拷贝和浅拷贝的知识点">
+<meta name="twitter:description" content="面向对象js
+对象：属性和方法的集合
+属性：其实就是变量（只不过有个归属）
+方法：其实就是函数（只不过有个归属）
+类：一组同样属性和方法的对象的集合(构造函数)
+
+模式
+工厂模式
+
+
+工厂模式是软件工程领域一种广为人知的设计模式，而由于在ECMAScript中无法创建类，因此用函数封装以特定接口创建对象。其实现方法非常简单，也就是在函数内创建一个对象，给对象赋予属性及方法再将对象返回即可。
+
+
+构">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +178,198 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Day37面向对象1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象的模式,继承,构造函数,深拷贝和浅拷贝的知识点
+    </h1>
+  
+
+        
+        <a href="/2016/10/29/Day37面向对象1/" class="archive-article-date">
+  	<time datetime="2016-10-29T01:05:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象js"><a href="#面向对象js" class="headerlink" title="面向对象js"></a>面向对象js</h1><ul>
+<li>对象：属性和方法的集合</li>
+<li>属性：其实就是变量（只不过有个归属）</li>
+<li>方法：其实就是函数（只不过有个归属）</li>
+<li>类：一组同样属性和方法的对象的集合(构造函数)</li>
+</ul>
+<h2 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h2><ul>
+<li>工厂模式</li>
+</ul>
+<blockquote>
+<p>工厂模式是软件工程领域一种广为人知的设计模式，而由于在ECMAScript中无法创建类，因此用函数封装以特定接口创建对象。其实现方法非常简单，也就是在函数内创建一个对象，给对象赋予属性及方法再将对象返回即可。</p>
+</blockquote>
+<ul>
+<li>构造函数模式<blockquote>
+<p>函数名首写字母为大写（虽然标准没有严格规定首写字母为大写，但按照惯例，构造函数的首写字母用大写</p>
+<pre><code>1. 没有显示的创建对象
+</code></pre><ol>
+<li>直接将属性和方法赋值给了this对象<ol>
+<li>没有return语句</li>
+<li>使用new创建对象</li>
+<li><mark>能够识别对象</mark>（这正是构造函数模式胜于工厂模式的地方<blockquote>
+<p>构造函数虽然好用，但也并非没有缺点，使用构造函数的最大的问题在于每次创建实例的时候都要重新创建一次方法（理论上每次创建对象的时候对象的属性均不同，而对象的方法是相同的），然而创建两次完全相同的方法是没有必要的，也浪费内存。
+　
+　　　  </p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p>原型</p>
+<blockquote>
+<p>我们创建的每个函数都有prototype（原型）属性，这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。使用原型对象的好处就是可以让所有对象实例共享它所包含的属性及方法。</p>
+</blockquote>
+</li>
+<li><p>原型链</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//工厂模式</div><div class="line">function obj(name)&#123;</div><div class="line">		var obj = &#123;&#125;;//创建对象 var obj = new Object();</div><div class="line">		obj.name = name;</div><div class="line">		obj.show = function()&#123;</div><div class="line">			console.log(this.name);//obj.name</div><div class="line">		&#125;</div><div class="line">		return obj;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//构造函数</div><div class="line">	function Person(name,age)&#123;</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	//Person的原型,构造对象的时候不需要再创建以下方法,需要的时候直接调用</div><div class="line">	Person.prototype = &#123;//缺点是东西是写死了的</div><div class="line">		showName:function()&#123;</div><div class="line">			console.log(this.name);</div><div class="line">		&#125;,</div><div class="line">		showAge:function()&#123;</div><div class="line">			console.log(this.age);</div><div class="line">		&#125;,</div><div class="line">		index:5</div><div class="line">	&#125; </div><div class="line">	var a = new Person(&quot;aa&quot;,12);</div><div class="line">	var b = new Person(&quot;bb&quot;,13);</div><div class="line">	//不会改变原型里面的属性,改变的是a自己的属性</div><div class="line">	a.index = 10;//只改自己的index属性</div><div class="line"></div><div class="line">	//改变原型里面的属性方法只能通过原型的属性</div><div class="line">	Person.prototype.index = 20;//a和b都能调用的index,而且输出的都是20</div><div class="line">	a.showName();//aa</div><div class="line">	b.showName();//bb</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//原型链最顶是object       </div><div class="line">for (var i = 0;i&lt;5;i++) &#123;</div><div class="line">	Food.prototype[&quot;Food&quot;+i] = i;</div><div class="line">	Food.prototype = new Food;//对象</div><div class="line">&#125;</div><div class="line">function Food()&#123;&#125;</div><div class="line">console.log(new Food);</div></pre></td></tr></table></figure>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li>call apply方法继承 (apply只有两个参数)</li>
+<li>原型继承</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//继承</div><div class="line">	function Parent(name)&#123;</div><div class="line">		this.name = name;</div><div class="line">		this.fang = &quot;3套&quot;;</div><div class="line">		this.car = &quot;11台&quot;;</div><div class="line">	&#125;</div><div class="line">	Parent.prototype = &#123;</div><div class="line">		show:function()&#123;</div><div class="line">			console.log(&quot;房&quot;+this.fang+&quot;,车&quot;+this.car);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//将Parent的原型继承给Son (原型继承)</div><div class="line">	// Son.prototype = Parent.prototype;</div><div class="line">	Son.prototype = new Parent();</div><div class="line">	function Son(name)&#123;</div><div class="line">		//Son继承Parent函数里面的属性,但是不继承Parent里面的prototype的方法和属性</div><div class="line">		// Parent.call(this);</div><div class="line">		//arguments可以代替所有的参数 ==&gt;name参数</div><div class="line">		Parent.apply(this,arguments);</div><div class="line">	&#125;</div><div class="line">	var a = new Son(&quot;haha&quot;);</div><div class="line">	console.log(a.fang);</div><div class="line">	console.log(a.name);</div><div class="line">	a.show();</div></pre></td></tr></table></figure>
+<h2 id="浅拷贝和深拷贝"><a href="#浅拷贝和深拷贝" class="headerlink" title="浅拷贝和深拷贝"></a>浅拷贝和深拷贝</h2><blockquote>
+<p>for in除了可以循环不知道的函数中参数的个数,还可以循环对象中的属性</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">//浅拷贝:只是表面的拷贝,但是第一层的属性值改变是不会印象最先的属性值</div><div class="line">	var div = &#123;</div><div class="line">		id:&quot;wrap&quot;,</div><div class="line">		style:&#123;</div><div class="line">			width:&quot;100px&quot;,</div><div class="line">			height:&quot;100px&quot;,</div><div class="line">			background:&quot;red&quot;</div><div class="line">		&#125;,</div><div class="line">		click:function()&#123;</div><div class="line">			console.log(&quot;click&quot;);</div><div class="line">		&#125;,</div><div class="line">		children:[&#123;a1:&#123;&#125;&#125;,&#123;a2:&#123;&#125;&#125;,&#123;a3:&#123;&#125;&#125;,&#123;a4:&#123;&#125;&#125;]</div><div class="line">	&#125;</div><div class="line">	//封装函数,就不用一个一个复制</div><div class="line">	function copy(p)&#123;</div><div class="line">		var c = &#123;&#125;;</div><div class="line">		for (var key in p) &#123;//for in也可以循环对象的属性和方法 有一个问题???style = style但是style对象,只是表层的复制(浅拷贝)</div><div class="line">			c[key] = p[key];</div><div class="line">		&#125;</div><div class="line">		return c;</div><div class="line">	&#125;</div><div class="line">	var obj = copy(div);</div><div class="line">	obj.style.background = &quot;blue&quot;;</div><div class="line">	obj.style.width = &quot;200px&quot;;</div><div class="line">	console.log(div);//200px</div><div class="line">	console.log(obj);//200px</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">var div = &#123;</div><div class="line">	id:&quot;wrap&quot;,</div><div class="line">	style:&#123;</div><div class="line">		width:&quot;100px&quot;,</div><div class="line">		height:&quot;100px&quot;,</div><div class="line">		background:&quot;red&quot;</div><div class="line">	&#125;,</div><div class="line">	click:function()&#123;</div><div class="line">		console.log(&quot;click&quot;);</div><div class="line">	&#125;,</div><div class="line">	children:[&#123;a1:&#123;&#125;&#125;,&#123;a2:&#123;&#125;&#125;,&#123;a3:&#123;&#125;&#125;,&#123;a4:&#123;&#125;&#125;]</div><div class="line">&#125; </div><div class="line">//封装函数,就不用一个一个复制</div><div class="line">function copy(p,c)&#123;//其中c参数是可有有无</div><div class="line">	var c = c || &#123;&#125;;</div><div class="line">	for (var key in p) &#123;</div><div class="line">		if (typeof p[key] == &quot;object&quot;) &#123;</div><div class="line">			c[key] = p[key].constructor == Array?[]:&#123;&#125;;</div><div class="line">			copy(p[key],c[key]);</div><div class="line">		&#125;else&#123;//浅拷贝//for in也可以循环对象的属性和方法 有一个问题???style = style但是style对象,只是表层的复制(浅拷贝)</div><div class="line">			c[key] = p[key];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return c;</div><div class="line">&#125;</div><div class="line">var obj = copy(div);</div><div class="line">console.log(div);//100px</div><div class="line">console.log(obj);//200px</div></pre></td></tr></table></figure>
+<h4 id="concustructor是可以查找该函数的类型-好用-可以区分对象-object-的类型-但是proto不能区分object对象"><a href="#concustructor是可以查找该函数的类型-好用-可以区分对象-object-的类型-但是proto不能区分object对象" class="headerlink" title="concustructor是可以查找该函数的类型(好用),可以区分对象(object)的类型,但是proto不能区分object对象"></a>concustructor是可以查找该函数的类型(好用),可以区分对象(object)的类型,但是<strong>proto</strong>不能区分object对象</h4>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/10/29/Day37面向对象1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/11/01/Day39_canvas2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          canvas的刮彩票小项目,canvas的关于图片的属性
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/21/英意项目/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">英意项目</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

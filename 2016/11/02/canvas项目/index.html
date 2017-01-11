@@ -6,14 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Susan</title>
+  <title>canvas的画布 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susan">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="eCharts  画折线图和饼图等(是js文件)
+
+canvas画饼图
+注意点:textBaseline的默认值是alphabetic
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445var canvas = document.querySelector(&amp;apos;canvas&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas的画布">
+<meta property="og:url" content="http://yoursite.com/2016/11/02/canvas项目/index.html">
 <meta property="og:site_name" content="Susan">
+<meta property="og:description" content="eCharts  画折线图和饼图等(是js文件)
+
+canvas画饼图
+注意点:textBaseline的默认值是alphabetic
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445var canvas = document.querySelector(&amp;apos;canvas&amp;">
+<meta property="og:updated_time" content="2017-01-11T05:23:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan">
+<meta name="twitter:title" content="canvas的画布">
+<meta name="twitter:description" content="eCharts  画折线图和饼图等(是js文件)
+
+canvas画饼图
+注意点:textBaseline的默认值是alphabetic
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445var canvas = document.querySelector(&amp;apos;canvas&amp;">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -135,296 +154,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-canvas项目" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      canvas的画布
+    </h1>
+  
+
+        
+        <a href="/2016/11/02/canvas项目/" class="archive-article-date">
+  	<time datetime="2016-11-02T11:19:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-02</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>eCharts  画折线图和饼图等(是js文件)</li>
+</ul>
+<h1 id="canvas画饼图"><a href="#canvas画饼图" class="headerlink" title="canvas画饼图"></a>canvas画饼图</h1><ul>
+<li>注意点:textBaseline的默认值是alphabetic</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">var canvas = document.querySelector(&apos;canvas&apos;);</div><div class="line">var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">//数据</div><div class="line">var arr =[</div><div class="line">	&#123;&quot;title&quot;:&quot;第一季度&quot;,&quot;num&quot;:&quot;200&quot;,&quot;color&quot;:&quot;red&quot;&#125;,</div><div class="line">	&#123;&quot;title&quot;:&quot;第二季度&quot;,&quot;num&quot;:&quot;100&quot;,&quot;color&quot;:&quot;green&quot;&#125;,</div><div class="line">	&#123;&quot;title&quot;:&quot;第三季度&quot;,&quot;num&quot;:&quot;300&quot;,&quot;color&quot;:&quot;blue&quot;&#125;,</div><div class="line">	&#123;&quot;title&quot;:&quot;第四季度&quot;,&quot;num&quot;:&quot;300&quot;,&quot;color&quot;:&quot;yellow&quot;&#125;,</div><div class="line">	&#123;&quot;title&quot;:&quot;第五季度&quot;,&quot;num&quot;:&quot;300&quot;,&quot;color&quot;:&quot;pink&quot;&#125;</div><div class="line">];</div><div class="line">//计算总数</div><div class="line">var count = 0;</div><div class="line">for (var i = 0;i &lt; arr.length;i++) &#123;</div><div class="line">	count += Number(arr[i].num);//计算arr里面的num值</div><div class="line">&#125;</div><div class="line">//圆的偏转的角度</div><div class="line">var deg1 = 0;</div><div class="line">var deg2 = 0;</div><div class="line">for (var i = 0;i &lt; arr.length;i++) &#123;</div><div class="line">	deg1 = deg2;//deg1总等于deg2的上一个值</div><div class="line">	deg2 += arr[i].num/count*360;//计算所占比例的角度</div><div class="line">	draw(deg1,deg2,arr[i].color);</div><div class="line">	drawTitle(300,10+25*i,arr[i].color,arr[i].title);</div><div class="line">&#125;</div><div class="line">//画圆</div><div class="line">function draw(deg1,deg2,color)&#123;</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.fillStyle = color;</div><div class="line">	ctx.moveTo(200,200);</div><div class="line">	ctx.arc(200,200,100,Math.PI/180*deg1,Math.PI/180*deg2);</div><div class="line">	ctx.fill();</div><div class="line">	ctx.closePath();</div><div class="line">&#125;</div><div class="line">//小方块加文字</div><div class="line">function drawTitle(x,y,color,title)&#123;</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.fillStyle = color;</div><div class="line">	ctx.fillRect(x,y,20,20);</div><div class="line">	ctx.font=&quot;15px 黑体&quot;;</div><div class="line">	ctx.textBaseline = &quot;middle&quot;;//默认是alphabetic</div><div class="line">	ctx.fillStyle = &quot;black&quot;;</div><div class="line">	ctx.fillText(title,x+30,y+10);//30是小矩形的宽高再加点间距  10是小矩形的宽度/2</div><div class="line">	</div><div class="line">	ctx.fill();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="canvas画放大镜"><a href="#canvas画放大镜" class="headerlink" title="canvas画放大镜"></a>canvas画放大镜</h1><ul>
+<li>注意点:图片是有加载的时间,所以获取图片宽高是会出现一些问题<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">var wrap = document.querySelector(&apos;.wrap&apos;)</div><div class="line">	var minImg = wrap.children[0];</div><div class="line">	var div = wrap.children[1];</div><div class="line">	var canvas = document.querySelector(&apos;canvas&apos;);</div><div class="line">	var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">	</div><div class="line">	//创建大图</div><div class="line">	var maxImg = new Image();</div><div class="line">	maxImg.src = &quot;img/max.jpg&quot;;</div><div class="line"></div><div class="line">	wrap.onmouseenter = function()&#123;</div><div class="line">		div.style.display = &quot;block&quot;;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	wrap.onmouseleave = function()&#123;</div><div class="line">		div.style.display = &quot;none&quot;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	//这里不是拖拽,是鼠标的移动</div><div class="line">	document.onmousemove = function(e)&#123;</div><div class="line">		//鼠标经过时,鼠标一直处于小方块的中心</div><div class="line">		var x = e.clientX-wrap.offsetLeft-1-div.offsetWidth/2;</div><div class="line">		var y = e.clientY-wrap.offsetTop-1-div.offsetWidth/2;</div><div class="line">		//判断碰撞</div><div class="line">		if (x&lt;0) &#123;</div><div class="line">			x = 0</div><div class="line">		&#125;else if (x&gt;wrap.clientWidth-div.offsetWidth) &#123;</div><div class="line">			x = wrap.clientWidth-div.offsetWidth; </div><div class="line">		&#125;</div><div class="line">		if (y&lt;0) &#123;</div><div class="line">			y = 0;</div><div class="line">		&#125;else if (y&gt;wrap.clientHeight-div.offsetHeight) &#123;</div><div class="line">			y = wrap.clientHeight-div.offsetHeight;</div><div class="line">		&#125;</div><div class="line">		// var scale = maxImg.offsetWidth/minImg.offsetWidth;//要图片加载完毕,才能计算</div><div class="line">		var scale = 800/350;</div><div class="line">		ctx.drawImage(maxImg,x*scale,y*scale,100*scale,100*scale,0,0,canvas.width,canvas.height);</div><div class="line">		div.style.left = x+&quot;px&quot;;</div><div class="line">		div.style.top = y+&quot;px&quot;;</div><div class="line">		</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="canvas的事件isPointInPath"><a href="#canvas的事件isPointInPath" class="headerlink" title="canvas的事件isPointInPath"></a>canvas的事件isPointInPath</h1><ul>
+<li>isPointInPath判断x,y的位置是否再当前绘制的路径上面</li>
+<li>如果出现多个矩形或是圆,只有最后的方块才能执行isPointInPath,解决方案是重新画,再用isPointInPath判断</li>
+<li>注意点:isPointInPath的返回值是false和true</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var canvas = document.querySelector(&apos;canvas&apos;);</div><div class="line">var ctx = canvas.getContext(&apos;2d&apos;);</div><div class="line">ctx.rect(50,50,100,100);//这里不能用fillRect()</div><div class="line">ctx.fill();</div><div class="line"></div><div class="line">ctx.beginPath();</div><div class="line">ctx.arc(200,200,50,0,Math.PI*2);</div><div class="line">ctx.fill();</div><div class="line">ctx.closePath();</div><div class="line">canvas.onclick = function(e)&#123;</div><div class="line">	var x = e.clientX-canvas.offsetLeft;</div><div class="line">	var y =e.clientY-canvas.offsetTop;</div><div class="line">	//(判断点是否再这个路径里面) isPointInPath判断x,y的位置是否再当前绘制的路径上面</div><div class="line">	console.log(ctx.isPointInPath(x,y));//可以判断圆,但是不可以判断正方块</div><div class="line">	//如果要画的东西都能判断,就要重新画一次,再判断</div><div class="line">	// ctx.arc(200,200,50,0,Math.PI*2);console.log(ctx.isPointInPath(x,y));</div><div class="line">	// ctx.rect(50,50,100,100);console.log(ctx.isPointInPath(x,y));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a>碰撞</h1><h1 id="方块的动画-新的动画方法-requestAnimationFrame"><a href="#方块的动画-新的动画方法-requestAnimationFrame" class="headerlink" title="方块的动画(新的动画方法:requestAnimationFrame)"></a>方块的动画(新的动画方法:requestAnimationFrame)</h1><ul>
+<li>requestAnimationFrame cancelAnimationFrame(是取消)</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/30/面试总结/" class="archive-article-date">
-  	<time datetime="2016-12-30T07:56:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/30/面试总结/">面试总结</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/11/02/canvas项目/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/19/跨域/" class="archive-article-date">
-  	<time datetime="2016-12-19T03:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-19</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/19/跨域/">跨域的注意点</a>
-    </h1>
+    <a href="/2016/11/07/php1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          php中基本属性的总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/01/Day39_canvas2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">canvas的刮彩票小项目,canvas的关于图片的属性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/多人开发/" class="archive-article-date">
-  	<time datetime="2016-12-06T03:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/多人开发/">多人开发的环境配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/06/react的学习网址/" class="archive-article-date">
-  	<time datetime="2016-12-06T01:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/react的学习网址/">react的学习网址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/react/" class="archive-article-date">
-  	<time datetime="2016-12-05T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/react/">react的基本理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html单位/" class="archive-article-date">
-  	<time datetime="2016-12-02T02:09:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html单位/">html单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/02/html嵌套html/" class="archive-article-date">
-  	<time datetime="2016-12-02T01:49:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/02/html嵌套html/">html里在嵌套html的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/25/ECMAScript的概述/" class="archive-article-date">
-  	<time datetime="2016-11-25T09:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/25/ECMAScript的概述/">ECMAScript的入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/安装的命令行/" class="archive-article-date">
-  	<time datetime="2016-11-22T04:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/安装的命令行/">node.js的安装命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/21/前端ui框架和快捷键网站/" class="archive-article-date">
-  	<time datetime="2016-11-21T08:55:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/21/前端ui框架和快捷键网站/">快捷键,ui框架地址</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -447,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
