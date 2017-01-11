@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>MAC下SVN的使用 | Susan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MAC下SVN的使用一、搭建svn服务器1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录1$ svnadmin create svn/1
-2.配置文件conf文件夹是配置文件夹，选择svnserve.conf配置，如下：1234#anon-access = read  #auth-access = write  #password-db = passwd  #">
+  <meta name="description" content="一、搭建svn服务器1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录1$ svnadmin create svn/1
+2.配置文件conf文件夹是配置文件夹，选择svnserve.conf配置，如下：1234#anon-access = read  #auth-access = write  #password-db = passwd  #authz-db =">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MAC下SVN的使用">
 <meta property="og:url" content="http://yoursite.com/2016/10/21/MAC下SVN的使用/index.html">
 <meta property="og:site_name" content="Susan">
-<meta property="og:description" content="MAC下SVN的使用一、搭建svn服务器1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录1$ svnadmin create svn/1
-2.配置文件conf文件夹是配置文件夹，选择svnserve.conf配置，如下：1234#anon-access = read  #auth-access = write  #password-db = passwd  #">
-<meta property="og:updated_time" content="2017-01-11T05:29:09.000Z">
+<meta property="og:description" content="一、搭建svn服务器1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录1$ svnadmin create svn/1
+2.配置文件conf文件夹是配置文件夹，选择svnserve.conf配置，如下：1234#anon-access = read  #auth-access = write  #password-db = passwd  #authz-db =">
+<meta property="og:updated_time" content="2017-01-11T05:56:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC下SVN的使用">
-<meta name="twitter:description" content="MAC下SVN的使用一、搭建svn服务器1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录1$ svnadmin create svn/1
-2.配置文件conf文件夹是配置文件夹，选择svnserve.conf配置，如下：1234#anon-access = read  #auth-access = write  #password-db = passwd  #">
+<meta name="twitter:description" content="一、搭建svn服务器1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录1$ svnadmin create svn/1
+2.配置文件conf文件夹是配置文件夹，选择svnserve.conf配置，如下：1234#anon-access = read  #auth-access = write  #password-db = passwd  #authz-db =">
   
     <link rel="alternative" href="/atom.xml" title="Susan" type="application/atom+xml">
   
@@ -162,7 +162,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MAC下SVN的使用"><a href="#MAC下SVN的使用" class="headerlink" title="MAC下SVN的使用"></a>MAC下SVN的使用</h1><h2 id="一、搭建svn服务器"><a href="#一、搭建svn服务器" class="headerlink" title="一、搭建svn服务器"></a>一、搭建svn服务器</h2><h3 id="1-svnadmin-create创建-svn是svn的目录，”1”是一个版本库的目录"><a href="#1-svnadmin-create创建-svn是svn的目录，”1”是一个版本库的目录" class="headerlink" title="1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录"></a>1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svnadmin create svn/1</div></pre></td></tr></table></figure>
+        <h2 id="一、搭建svn服务器"><a href="#一、搭建svn服务器" class="headerlink" title="一、搭建svn服务器"></a>一、搭建svn服务器</h2><h3 id="1-svnadmin-create创建-svn是svn的目录，”1”是一个版本库的目录"><a href="#1-svnadmin-create创建-svn是svn的目录，”1”是一个版本库的目录" class="headerlink" title="1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录"></a>1.svnadmin create创建 svn是svn的目录，”1”是一个版本库的目录</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ svnadmin create svn/1</div></pre></td></tr></table></figure>
 <h2 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2.配置文件"></a>2.配置文件</h2><h3 id="conf文件夹是配置文件夹，选择svnserve-conf配置，如下："><a href="#conf文件夹是配置文件夹，选择svnserve-conf配置，如下：" class="headerlink" title="conf文件夹是配置文件夹，选择svnserve.conf配置，如下："></a>conf文件夹是配置文件夹，选择svnserve.conf配置，如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#anon-access = read  </div><div class="line">#auth-access = write  </div><div class="line">#password-db = passwd  </div><div class="line">#authz-db = authz</div></pre></td></tr></table></figure>
 <p>去掉这几个前面的#和空格</p>
 <h3 id="选择passwd文件设置账号密码"><a href="#选择passwd文件设置账号密码" class="headerlink" title="选择passwd文件设置账号密码"></a>选择passwd文件设置账号密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[users]</div><div class="line"># harry = harryssecret</div><div class="line"># sally = sallyssecret</div><div class="line">admin = admin</div></pre></td></tr></table></figure>
@@ -279,7 +279,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          英意项目
+          英意项目总结
         
       </div>
     </a>
